@@ -7,6 +7,3 @@ node_modules/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .temp
-
-# vuepress build output
-dist
