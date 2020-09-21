@@ -1,6 +1,6 @@
 {
   "name": "@qcyblm/vuepress-theme-vpx",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "VPX theme for VuePress",
   "main": "index.js",
   "repository": {
@@ -31,8 +31,7 @@
     "vuepress-plugin-smooth-scroll": "^0.0.3"
   },
   "publishConfig": {
-    "access": "public",
-    "registry":"https://npm.pkg.github.com/"
+    "access": "public"
   },
   "maintainers": [
     {

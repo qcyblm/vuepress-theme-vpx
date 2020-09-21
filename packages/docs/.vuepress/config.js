@@ -1,3 +1,5 @@
+const moment = require('moment')
+moment.locale("zh-cn");
 module.exports = {
   base: '/vuepress-theme-vpx/',
   locales: {
@@ -11,7 +13,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   temp: '.temp',
-  dest: '../../docs',
+  dest: '../../docs/',
   theme: '@qcyblm/vpx',
   themeConfig: {
     logo: '/assets/img/logo.png',
@@ -27,11 +29,23 @@ module.exports = {
     repoicon: 'fab fa-github',
     repo: 'qcyblm/vuepress-theme-vpx',
     docsRepo: 'qcyblm/vuepress-theme-vpx',
-    docsDir: 'packages/docs/docs/',
+    docsDir: '/packages/docs/',
     docsBranch: 'master',
     editLinks: true,
-    editLinkText: '编辑当前页'
+    editLinkText: '编辑当前页',
+    lastUpdated: '最后更新时间',
   },
+  plugins: [
+    ['@vuepress/back-to-top'],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          return moment(timestamp).format("LLLL")
+        }
+      }
+    ],
+  ],
 }
 
 function getGuideSidebar(groupA) {

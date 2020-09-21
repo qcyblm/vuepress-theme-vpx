@@ -7,8 +7,6 @@ actionText: 快速上手 →
 actionLink: /guide/getting-started
 footer: 
 - title: MIT Licensed | Copyright © 2020-present qcyblm
-  beian: null
-  beianlink: null
 sidebar: false
 ---
 ### 安装主题
