@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://qcyblm.github.io/vuepress-theme-vpx/" target="_blank">
-    <img width="180" src="./packages/docs/docs/.vuepress/public/vpx.png" alt="logo">
+    <img width="180" src="./packages/docs/.vuepress/public/vpx.png" alt="logo">
   </a>
 </p>
 
@@ -50,4 +50,4 @@ module.exports = {
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 
 ## LICENSE
-[![GitHub](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx)](./LICENSE)
+![GitHub](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx)]
