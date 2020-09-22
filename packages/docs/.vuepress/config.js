@@ -45,6 +45,16 @@ module.exports = {
         }
       }
     ],
+    ['vuepress-plugin-code-copy',
+      {
+        align: 'bottom',
+        color: 'rgba(255,255,255,0.4)',
+        backgroundTransition: 'bottom',
+        backgroundColor: '#0075b8',
+        successText: '复制成功',
+        staticIcon: false,
+      }
+    ],
   ],
 }
 

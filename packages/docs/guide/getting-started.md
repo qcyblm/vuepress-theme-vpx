@@ -14,8 +14,8 @@ yarn add -D vuepress # npm install -D vuepress
 ```
 4. 将 VPX 主题 安装为本地依赖
 ``` sh
-yarn add @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
-# or npm i @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
+yarn add @qcyblm/vuepress-theme-vpx -D
+# or npm i @qcyblm/vuepress-theme-vpx -D
 ```
 5. 创建你的第一篇文档
 ``` sh

@@ -27,8 +27,8 @@ VPX是VuePress的一个主题，默认主题基础上做了些扩展功能;
 
 ## 安装主题
 ``` sh
-yarn add @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
-# or npm i @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
+yarn add @qcyblm/vuepress-theme-vpx -D
+# or npm i @qcyblm/vuepress-theme-vpx -D
 ```
 ## 引用主题
 ``` js

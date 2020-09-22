@@ -11,8 +11,8 @@ sidebar: false
 ---
 ### 安装主题
 ``` sh
-yarn add @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
-# or npm i @qcyblm/vuepress-theme-vpx --registry=https://npm.pkg.github.com/
+yarn add @qcyblm/vuepress-theme-vpx -D
+# or npm i @qcyblm/vuepress-theme-vpx -D
 ```
 ### 引用主题
 ``` js

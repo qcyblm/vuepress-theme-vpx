@@ -40,8 +40,10 @@
   "devDependencies": {
     "@qcyblm/vuepress-theme-vpx": "^1.0.0-alpha.1",
     "@vuepress/plugin-back-to-top": "^1.5.4",
-    "@vuepress/plugin-last-updated": "^1.5.4",
     "moment": "^2.28.0",
     "vuepress": "^1.5.4"
+  },
+  "dependencies": {
+    "vuepress-plugin-code-copy": "^1.0.6"
   }
 }
