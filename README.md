@@ -4,7 +4,6 @@
   </a>
 </p>
 
-![GitHub license](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx)
 ![GitHub stars](https://img.shields.io/github/stars/qcyblm/vuepress-theme-vpx)
 ![GitHub forks](https://img.shields.io/github/forks/qcyblm/vuepress-theme-vpx)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx?include_prereleases)
@@ -50,4 +49,4 @@ module.exports = {
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 
 ## LICENSE
-![GitHub license](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx)
+![GitHub](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx)
