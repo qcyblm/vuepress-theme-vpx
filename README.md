@@ -43,8 +43,7 @@ module.exports = {
 
 ## 贡献者
 
- [<img src="https://avatars3.githubusercontent.com/u/5212214?s=60&u=4a0a0d206bcd8ba7b053efe19ec9764a0665d6dc&v=4" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing-doc "Evan Xu")
- [<img src="https://avatars2.githubusercontent.com/u/18067907?s=60&u=d90efd2d6b8be80fe44c129a324b1d262d657e51&v=4" width="32px" height="32px" alt="reco_luan" style="border-radius: 32px;margin-left: 10px;">](https://github.com/vuepress-reco/vuepress-theme-reco "reco_luan")
+ [<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing-doc "Evan Xu")
 
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 

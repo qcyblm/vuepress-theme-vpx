@@ -1,6 +1,6 @@
 {
   "name": "@qcyblm/vuepress-theme-vpx",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "VPX theme for VuePress",
   "main": "index.js",
   "repository": {
@@ -20,15 +20,15 @@
   },
   "homepage": "https://github.com/qcyblm/vuepress-theme-vpx#readme",
   "dependencies": {
-    "@vuepress/plugin-active-header-links": "1.5.4",
-    "@vuepress/plugin-nprogress": "1.5.4",
-    "@vuepress/plugin-search": "1.5.4",
+    "@vuepress/plugin-active-header-links": "1.6.0",
+    "@vuepress/plugin-nprogress": "1.6.0",
+    "@vuepress/plugin-search": "1.6.0",
     "docsearch.js": "^2.5.2",
     "lodash": "^4.17.15",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vuepress-plugin-container": "^2.0.2",
-    "vuepress-plugin-smooth-scroll": "^0.0.3"
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
   },
   "publishConfig": {
     "access": "public"

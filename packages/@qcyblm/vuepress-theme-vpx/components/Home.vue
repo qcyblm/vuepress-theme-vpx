@@ -55,12 +55,13 @@
         :key="index"
         class="footer"
       >
-        Theme&nbsp;by&nbsp;<a href="https://github.com/qcyblm/vuepress-theme-vpx" target="_blank" title="本站主题">VPX</a>&nbsp;|&nbsp;{{footer.title}}
+        Theme&nbsp;by&nbsp;<a href="https://github.com/qcyblm/vuepress-theme-vpx" target="_blank" title="本站主题">VPX</a><span v-if="footer.createYear">&nbsp;&nbsp;|&nbsp;&nbsp;Copyright&nbsp;&copy;&nbsp;<span v-if="footer.createYear < new Date().getFullYear()">{{ footer.createYear }}-{{ new Date().getFullYear() }}</span><span v-else>{{ footer.createYear }}&nbsp;</span><span v-if="footer.authorLink"><a :href="footer.authorLink" target="_blank">{{footer.author}}</a></span><span v-else-if="footer.author">{{footer.author}}</span><span v-if="footer.copyrightInfo">&nbsp;{{footer.copyrightInfo}}</span></span><span v-if="footer.licensed">&nbsp;&nbsp;|&nbsp;&nbsp;<a v-if="footer.licensedLink" :href="footer.licensedLink" target="_blank">{{footer.licensed}}</a><span v-else>{{footer.licensed}}</span>&nbsp;Licensed</span>
         <div
           v-if="footer.beian"
           class="beian"
         >
-        <a :href="footer.beianlink" target="_blank">{{footer.beian}}</a>
+          <a v-if="footer.beianLink" :href="footer.beianLink" target="_blank">{{footer.beian}}</a>
+          <span v-else>{{footer.beian}}</span>
         </div>
       </div>
   </main>
