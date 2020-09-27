@@ -10,3 +10,4 @@ node_modules/
 
 # Configuration information
 .vuepress
+packages/docs/package.json
