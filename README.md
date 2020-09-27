@@ -4,12 +4,16 @@
   </a>
 </p>
 
+![npm](https://img.shields.io/npm/l/@qcyblm/vuepress-theme-vpx)
+![npm (scoped)](https://img.shields.io/npm/v/@qcyblm/vuepress-theme-vpx)
+![npm](https://img.shields.io/npm/dt/@qcyblm/vuepress-theme-vpx)
+
 ![GitHub stars](https://img.shields.io/github/stars/qcyblm/vuepress-theme-vpx)
 ![GitHub forks](https://img.shields.io/github/forks/qcyblm/vuepress-theme-vpx)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx?include_prereleases)
 ![GitHub issues](https://img.shields.io/github/issues/qcyblm/vuepress-theme-vpx)
 
-![VuePress](https://img.shields.io/badge/VuePress-%3E%3D%201.5.4-blue.svg)
+![VuePress](https://img.shields.io/badge/VuePress-%3E%3D%201.6.0-blue.svg)
 ![Author](https://img.shields.io/badge/Author-qcyblm-red)
 ![Theme](https://img.shields.io/badge/Theme-@qcyblm/vuepress-%2dtheme-%2dvpx-red)
 ![QQ群](https://img.shields.io/badge/QQ群-984339883-red)

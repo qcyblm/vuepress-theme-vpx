@@ -6,7 +6,12 @@ tagline: '一款基于 VuePress 开发的主题'
 actionText: 快速上手 →
 actionLink: /guide/getting-started
 footer: 
-- title: MIT Licensed | Copyright © 2020-present qcyblm
+- createYear: 2020
+  author: qcyblm
+  authorLink: https://github.com/qcyblm
+  copyrightInfo: All Rights Reserved.
+  licensedLink: https://github.com/qcyblm/vuepress-theme-vpx/blob/master/LICENSE.md
+  licensed: MIT
 sidebar: false
 ---
 ### 安装主题
@@ -29,8 +34,7 @@ module.exports = {
 :::
 ## 贡献者
 
- [<img src="https://avatars3.githubusercontent.com/u/5212214?s=60&u=4a0a0d206bcd8ba7b053efe19ec9764a0665d6dc&v=4" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing-doc "Evan Xu")
- [<img src="https://avatars2.githubusercontent.com/u/18067907?s=60&u=d90efd2d6b8be80fe44c129a324b1d262d657e51&v=4" width="32px" height="32px" alt="reco_luan" style="border-radius: 32px;margin-left: 10px;">](https://github.com/vuepress-reco/vuepress-theme-reco "reco_luan")
+[<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing-doc "Evan Xu")
 
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 

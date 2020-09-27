@@ -10,9 +10,14 @@ sidebar: auto
 ---
 /* ... */
 footer:
-- title: MIT Licensed | Copyright © 2020 qcyblm
-  beian: ICP备号
-  beianlink: http://www.xxx.com/
+- createYear: 创建年份（可选，author、authorLink、copyrightInfo 启动时必选）
+  author: 作者 （可选）
+  authorLink: 作者链接 （可选）
+  copyrightInfo: 版权信息 （可选）
+  licensedLink: 许可证链接 （可选）
+  licensed: 许可证名称 （可选）
+  beian: ICP备号 （可选）
+  beianLink: 备案链接（可选）
 ---
 ```
 footer启动后，`title`信息不可省略不写，你可以将`beian`、`beianlink`设置为 `null` 或者直接省略不写，来禁用备案信息。
