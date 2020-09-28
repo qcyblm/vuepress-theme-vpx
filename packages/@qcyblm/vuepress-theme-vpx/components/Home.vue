@@ -189,4 +189,8 @@ export default {
     .feature
       h2
         font-size 1.25rem
+    .footer
+      font-size 0.75rem
+      span
+        overflow-wrap break-word
 </style>
