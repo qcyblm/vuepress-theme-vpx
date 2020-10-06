@@ -52,4 +52,4 @@ module.exports = {
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 
 ## LICENSE
-[![GitHub](https://img.shields.io/github/license/qcyblm/vuepress-theme-vpx?style=social)](/LICENSE)
+[MIT](/LICENSE)
