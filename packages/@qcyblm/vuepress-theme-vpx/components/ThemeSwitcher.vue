@@ -1,0 +1,83 @@
+<template>
+  <div class="theme-switcher">
+    <a
+      class="switch"
+      :class="{ light: isLight, dark: !isLight }"
+      @click="themeSwitch"
+    >
+      <span>
+        <i v-if="isLight" class="fa fa-sun" aria-hidden="true"></i>
+        <i v-else class="fa fa-moon" aria-hidden="true"></i>
+      </span>
+    </a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ThemeSwitcher',
+  data() {
+    return {
+      isLight: true
+    }
+  },
+  methods: {
+    themeSwitch() {
+      this.isLight = !this.isLight
+      
+      let htmlTag = document.getElementsByTagName('html')[0]
+
+      if (this.isLight) {
+        window.localStorage.setItem('theme', 'light')
+        htmlTag.setAttribute('data-theme', 'light')
+        this.$emit('themeMode', 'light')
+      } else {
+        window.localStorage.setItem('theme', 'dark')
+        htmlTag.setAttribute('data-theme', 'dark')
+        this.$emit('themeMode', 'dark')
+      }
+    },
+  },
+};
+</script>
+
+<style lang="stylus">
+.theme-switcher
+  position relative
+  width 40px
+  margin-left 1.5rem
+  .switch
+    display inline-block
+    vertical-align middle
+    width 100%
+    height 10px
+    border-radius 9px
+    cursor pointer
+    &:focus, &:active, &:link
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    span
+      display flex
+      align-items center
+      justify-content center
+      width 22px
+      height 22px
+      padding 3px
+      border-radius 12px
+      position absolute
+      top 22%
+      transition .5s ease
+      box-sizing border-box
+  .light
+    background-color #dfdfdf
+    span
+      background-color #303030
+      transform translateX(0%)
+      color #FFF
+  .dark
+    background-color #404040
+    span
+      background-color #FFFFFF
+      transform translateX(50%)
+      right 11px
+      color #000
+</style>
