@@ -7,6 +7,10 @@ Markdown 容器是对 Markdown 语法的一个扩展，使用简单的语法就�
 ## 提示框容器
 **输入**
 ```` md
+::: info
+这是一条信息
+:::
+
 ::: tip
 这是一条提示
 :::
@@ -21,6 +25,10 @@ Markdown 容器是对 Markdown 语法的一个扩展，使用简单的语法就�
 ````
 
 **输出**
+::: info
+这是一条信息
+:::
+
 ::: tip
 这是一条提示
 :::
@@ -93,29 +101,36 @@ console.log('这是一个详情块')
 先来看看效果：
 
 **输出**
+::: cardLink
+```yaml
+- name: 青春永不落幕
+  link: https://qcyblm.github.io
+  nameColor: ''
+  bgColor: ''
+```
+:::
+
+::: cardLinks
+```yaml
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://avatars.githubusercontent.com/qcyblm
+  link: https://blog.azan.one/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+```
+:::
+
 ::: cardList
 ```yaml
-- name: azanone blog
-  desc: a Geek love Design & Develop.
-  avatar: https://i0.wp.com/blog.azan.one/wp-content/uploads/2020/02/favicon.png
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://avatars.githubusercontent.com/qcyblm
   link: https://blog.azan.one/
-  nameColor: 'skyblue'
-  bgColor: '#2872fa'
-  textColor: '#eee'
-- name: '186526的博客'
-  desc: '啥都不会的屑'
-  avatar: https://cdn.jsdelivr.net/gh/186526/jsdelivr@1.1.4/avatar.jpg
-  link: https://186526.xyz/
-  nameColor: '#000'
-  bgColor: '#0D7C9E'
-  textColor: '#ccc'
-- name: xiao_yang的主站
-  desc: www.xiaoyang.pw
-  avatar: https://xiaoyang.pw/ico/ico.png
-  link: https://xiaoyang.pw/
-  nameColor: "#fff"
-  bgColor: '#ccc'
-  textColor: '#fff'
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
 ```
 :::
 
@@ -123,29 +138,37 @@ console.log('这是一个详情块')
 
 **输入**
 ```` md
+
+::: cardLink
+```yaml
+- name: 青春永不落幕
+  link: https://qcyblm.github.io
+  nameColor: ''
+  bgColor: ''
+```
+:::
+
+::: cardLinks
+```yaml
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://avatars.githubusercontent.com/qcyblm
+  link: https://blog.azan.one/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+```
+:::
+
 ::: cardList
 ```yaml
-- name: azanone blog
-  desc: a Geek love Design & Develop.
-  avatar: https://i0.wp.com/blog.azan.one/wp-content/uploads/2020/02/favicon.png
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://avatars.githubusercontent.com/qcyblm
   link: https://blog.azan.one/
-  nameColor: 'skyblue'
-  bgColor: '#2872fa'
-  textColor: '#eee'
-- name: '186526的博客'
-  desc: '啥都不会的屑'
-  avatar: https://cdn.jsdelivr.net/gh/186526/jsdelivr@1.1.4/avatar.jpg
-  link: https://186526.xyz/
-  nameColor: '#000'
-  bgColor: '#0D7C9E'
-  textColor: '#ccc'
-- name: xiao_yang的主站
-  desc: www.xiaoyang.pw
-  avatar: https://xiaoyang.pw/ico/ico.png
-  link: https://xiaoyang.pw/
-  nameColor: "#fff"
-  bgColor: '#ccc'
-  textColor: '#fff'
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
 ```
 :::
 ````
@@ -153,15 +176,24 @@ console.log('这是一个详情块')
 
 ### 语法
 ````md
-::: cardList <每行显示数量>
+::: cardLink
+```yaml
+- name: 名称
+  link: https://xxx/ #链接（可选）
+  nameColor: '' # 名称颜色（可选），默认$cardTitle。颜色值有#号时请添加单引号
+  bgColor: '' # 背景色（可选），默认$cardBgColor。颜色值有#号时请添加单引号
+```
+:::
+
+::: cardLinks <每行显示数量> or cardList <每行显示数量>
 ``` yaml
 - name: 名称
   desc: 描述
   avatar: https://xxx.jpg # 头像（可选）
   link: https://xxx/ # 链接（可选）
-  nameColor: '#000' # 名称颜色（可选），默认$cardTitle。颜色值有#号时请添加单引号
-  bgColor: '#EEF0F4' # 背景色（可选），默认$cardBgColor。颜色值有#号时请添加单引号
-  textColor: 'rgba(19,31,45,0.9)' # 文本色（可选），默认$cardTextColor 颜色值有#号时请添加单引号
+  nameColor: '' # 名称颜色（可选），默认$cardTitle。颜色值有#号时请添加单引号
+  bgColor: '' # 背景色（可选），默认$cardBgColor。颜色值有#号时请添加单引号
+  textColor: '' # 文本色（可选），默认$cardTextColor 颜色值有#号时请添加单引号
 ```
 :::
 ````

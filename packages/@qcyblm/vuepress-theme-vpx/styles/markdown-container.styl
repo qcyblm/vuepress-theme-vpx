@@ -1,16 +1,131 @@
 // markdown容器样式
-.theorem
-  margin 1rem 0
-  padding .1rem 1.5rem
-  border-radius 0.4rem
-  background-color #f0f4f8
-  .title
-    font-weight bold
-.custom-block
-  &.right
+
+.custom-block {
+  position: relative;
+  border-radius 8px
+
+  &::before {
+    position: absolute;
+    top: 19px;
+    left: -14px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .custom-block-title {
+    font-weight: 600;
+    margin-bottom: -0.4rem;
+  }
+
+  &.info {
+    border-color: $badgeInfoColor
+    background-color: #f8f8f8
+    padding 0.1rem 1.5rem
+    border-left-width 0.5rem
+    border-left-style solid
+    margin 1rem 0
+
+    &::before {
+      content: url('https://v3.vuejs.org/images/icons/info.svg')
+      width: 25px
+      height: 25px
+      left: -16px
+      box-sizing: border-box
+    }
+  }
+
+  &.tip {
+    border-color: $badgeTipColor;
+    background-color: #f8f8f8;
+
+    &::before {
+      content: url('https://v3.vuejs.org/images/icons/bulb.svg');
+      width: 25px;
+      height: 25px;
+      left: -16px;
+    }
+  }
+
+  &.warning {
+    border-color: $badgeWarningColor
+    background-color: #f8f8f8
+
+    .custom-block-title {
+      color: #222;
+    }
+
+    &::before {
+      content: url('https://v3.vuejs.org/images/icons/danger.svg');
+      width: 25px;
+      height: 25px;
+      left: -16px;
+      box-sizing: border-box;
+    }
+  }
+
+  &.danger {
+    border-color: $badgeErrorColor
+    background-color: #f8f8f8;
+
+    .custom-block-title {
+      color: #222;
+    }
+
+    &::before {
+      content: url('https://v3.vuejs.org/images/icons/stop.svg');
+      width: 25px;
+      height: 25px;
+      left: -16px;
+    }
+  }
+
+  &.details {
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    margin: 1.6em 0;
+    padding: 1.6em;
+    background-color: #eee;
+    h4 {
+      margin-top: 0;
+    }
+    figure,
+    p {
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    summary {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &.theorem{
+    margin 1rem 0
+    padding .1rem 1.5rem
+    border-radius 0.4rem
+    background-color #f0f4f8
+    .title{
+      font-weight bold
+    }
+  }
+
+  &.right{
     color transparentify($textColor, 0.4)
     font-size 0.9rem
     text-align right
+  }
+}
+
 // 居中容器
 .center-container
   text-align center
@@ -24,7 +139,112 @@ h1, h2, h3, h4, h5, h6
       float none
       padding-right 0
       margin-left -.9rem
-// 普通卡片列表
+
+// 普通卡片列表1
+.cardLinkContainer
+  margin .7rem 0
+  &>:not(.card-list)
+    display none
+  .card-list
+    margin -0.35rem
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+    .card-item
+      margin .35rem
+      background $cardBgColor
+      border-radius 100px
+      display flex
+      box-shadow 1px 1px 2px 0 rgba(0,0,0,.06)
+      transition all .4s
+      &:hover
+        text-decoration none
+        box-shadow 0 10px 20px -10px #999
+        transform translateY(-5px)
+        p
+          text-shadow 3px 2px 5px rgba(0, 0, 0, 0.15)
+      p
+        margin 0
+        padding 0 1rem
+        transition text-shadow .4s
+        text-align center
+      .name
+        margin .2rem 0 .3rem 0
+        color $cardTitle
+        font-weight 500
+
+// 普通卡片列表2
+.cardLinksContainer
+  margin .7rem 0
+  &>:not(.card-list)
+    display none
+  .card-list
+    margin -0.35rem
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+    .card-item
+      width calc(100%/3 - .7rem)
+      margin .35rem
+      background $cardBgColor
+      border-radius 3px
+      display flex 
+      box-shadow 1px 1px 2px 0 rgba(0,0,0,.06)
+      transition all .4s
+      &:hover
+        text-decoration none
+        box-shadow 0 10px 20px -10px #999
+        transform translateY(-5px)
+        img 
+          transform rotate(8deg) scale(1.1, 1.1)
+          box-shadow 3px 2px 7px rgba(0, 0, 0, 0.15)
+        div p
+          text-shadow 3px 2px 5px rgba(0, 0, 0, 0.15)
+      img
+        width 32px
+        height 32px
+        border-radius 50%
+        border 2px solid #fff
+        margin 1rem
+        margin-right 0
+        box-shadow 3px 2px 5px rgba(0, 0, 0, 0.08)
+        transition all .4s
+      div
+        flex 1
+        display inline-block
+        float right 
+        padding 0.5rem 0
+        p
+          margin 0
+          padding 0 1rem
+          transition text-shadow .4s
+        .name
+          margin .2rem 0 .3rem 0
+          color $cardTitle
+          font-weight 500
+          white-space nowrap
+        .desc
+          font-size .8rem
+          line-height 1.1rem
+          opacity .8
+          margin-bottom .2rem
+          color $cardTextColor
+          text-align left
+          white-space nowrap
+    .card-item.row-1
+      width calc(100% - .7rem)
+      img
+        margin-left 2rem
+    .card-item.row-2
+      width calc(100%/2 - .7rem)
+      img
+        margin-left 1.5rem
+    .card-item.row-3
+      width calc(100%/3 - .7rem)
+    .card-item.row-4
+      width calc(100%/4 - .7rem)
+
+// 普通卡片列表3
 .cardListContainer
   margin .7rem 0
   &>:not(.card-list)
@@ -95,6 +315,7 @@ h1, h2, h3, h4, h5, h6
       width calc(100%/3 - .7rem)
     .card-item.row-4
       width calc(100%/4 - .7rem)
+
 // 图文卡片列表
 .cardImgListContainer
   margin 1rem 0
@@ -167,9 +388,10 @@ h1, h2, h3, h4, h5, h6
       .box-footer
         overflow hidden
         padding .8rem 1rem
-        border-top  1px solid rgba(0,0,0,0.05)
+        border-top  1px solid $borderColor
         background-color $cardImgFooterBgColor
-        color $cardImgFooterAuthor
+        span
+          color $cardImgFooterAuthor
         img
           width 1.8rem
           height 1.8rem
@@ -197,6 +419,10 @@ h1, h2, h3, h4, h5, h6
            
 // 卡片列表的响应
 @media (max-width: 900px) 
+  .cardLinksContainer
+    .card-list
+      .card-item.row-4
+        width calc(100%/3 - .7rem)
   .cardListContainer
     .card-list
       .card-item.row-4
@@ -207,6 +433,10 @@ h1, h2, h3, h4, h5, h6
         width calc(100%/3 - 1rem)
 
 @media (max-width: 720px) 
+  .cardLinksContainer
+    .card-list
+      .card-item.row-4
+        width calc(100%/2 - .7rem)
   .cardListContainer
     .card-list
       .card-item.row-3, .card-item.row-4
@@ -219,6 +449,12 @@ h1, h2, h3, h4, h5, h6
         width calc(100%/2 - 1rem)
         
 @media (max-width: 500px) 
+  .cardLinksContainer
+    .card-list
+      .card-item.row-1, .card-item.row-2, .card-item.row-3, .card-item.row-4
+        width calc(100% - .7rem)
+        img
+          margin-left 1.5rem
   .cardListContainer
     .card-list
       .card-item.row-1, .card-item.row-2, .card-item.row-3, .card-item.row-4
@@ -229,3 +465,68 @@ h1, h2, h3, h4, h5, h6
     .card-list
       .card-item.row-1, .card-item.row-2, .card-item.row-3, .card-item.row-4
         width calc(100% - 1rem)
+
+// 暗黑模式
+[data-theme = dark ] & {
+  .custom-block{
+    &.info{
+      border-color: $dark[--badgeInfoColor]
+      background-color: rgba(243,245,247,.2)
+    }
+    &.tip{
+      border-color: $dark[--badgeTipColor]
+      background-color: rgba(243,245,247,.2)
+    }
+    &.warning{
+      border-color: $dark[--badgeWarningColor]
+      background-color: rgba(243,245,247,.2)
+      .custom-block-title {
+        color: #222;
+      }
+      p{
+        color #e7c000
+      }
+    }
+    &.danger{
+      border-color: $dark[--badgeErrorColor]
+      background-color: rgba(243,245,247,.2)
+    }
+    &.right{
+      color: transparentify($dark[--textColor])
+      p{
+        color: #bcc0c5
+        a{
+          color: $dark[--accentColor]
+        }
+      }
+    }
+    &.details{
+      background-color: #202124
+    }
+    &.theorem{
+      background-color: #27272b
+    }
+  }
+  .card-list{
+    .card-item{
+      background-color: $dark[--cardBgColor]
+      color: $dark[--cardTextColor]
+      .name{
+        color: $dark[--cardTitle]
+      }
+      p.desc,a{
+        color: $dark[--cardTextColor]
+      }
+      .box-info{
+        background-color: $dark[--cardBgColor]
+      }
+      .box-footer{
+        border-top-color: $dark[--borderColor]
+        background-color: $dark[--cardImgFooterBgColor]
+        span{
+          color: $dark[--cardImgFooterAuthor]
+        }
+      }
+    }
+  }
+}

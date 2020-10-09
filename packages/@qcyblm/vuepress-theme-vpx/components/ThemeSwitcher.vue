@@ -26,7 +26,6 @@ export default {
       this.isLight = !this.isLight
       
       let htmlTag = document.getElementsByTagName('html')[0]
-
       if (this.isLight) {
         window.localStorage.setItem('theme', 'light')
         htmlTag.setAttribute('data-theme', 'light')

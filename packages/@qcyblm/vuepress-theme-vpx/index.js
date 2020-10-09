@@ -1,5 +1,7 @@
 const path = require('path')
 const yaml = require('js-yaml');
+const CARD_LINKS = 'cardLinks';
+const CARD_LINK = 'cardLink';
 const CARD_LIST = 'cardList';
 const CARD_IMG_LIST = 'cardImgList';
 
@@ -30,6 +32,13 @@ module.exports = (options, ctx) => {
       ['@vuepress/active-header-links', options.activeHeaderLinks],
       '@vuepress/search',
       '@vuepress/plugin-nprogress',
+      ['container', {
+        type: 'info',
+        defaultTitle: {
+          '/': '信息',
+          '/en/': 'Info'
+        }
+      }],
       ['container', {
         type: 'tip',
         defaultTitle: {
@@ -74,6 +83,24 @@ module.exports = (options, ctx) => {
         type: 'right',
         defaultTitle: ''
       }],
+      [
+        'container',
+        {
+          type: CARD_LINK,
+          render: (tokens, idx) => {
+            return renderCardList(tokens, idx, CARD_LINK)
+          }
+        },
+      ],
+      [
+        'container',
+        {
+          type: CARD_LINKS,
+          render: (tokens, idx) => {
+            return renderCardList(tokens, idx, CARD_LINKS)
+          }
+        },
+      ],
       [
         'container',
         {
@@ -135,7 +162,11 @@ function renderCardList(tokens, idx, type) {
         }
 
         let listDOM = ''
-        if (type === CARD_LIST) { // 普通卡片列表
+        if (type === CARD_LINK) { // 普通卡片列表1
+          listDOM = getCardLinkDOM(dataList)
+        } else if(type === CARD_LINKS) { // 普通卡片列表2
+          listDOM = getCardLinksDOM(dataList, row)
+        } else if(type === CARD_LIST) { // 普通卡片列表3
           listDOM = getCardListDOM(dataList, row)
         } else if (type === CARD_IMG_LIST) { // 卡片图片列表
           listDOM = getCardImgListDOM(dataList, row)
@@ -149,8 +180,23 @@ function renderCardList(tokens, idx, type) {
   }
 }
 
-// 将数据解析成DOM结构 - 普通卡片列表
-function getCardListDOM(dataList, row) {
+// 将数据解析成DOM结构 - 普通卡片列表1
+function getCardLinkDOM(dataList) {
+  let listDOM = ''
+  dataList.forEach(item => {
+    listDOM += `
+      <${item.link ? 'a href="' + item.link + '" title="' + item.link + '"' : 'span'} class="card-item"
+         style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}"
+      >
+        <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>
+      </${item.link ? 'a' : 'span'}>
+   `
+  })
+  return listDOM
+}
+
+// 将数据解析成DOM结构 - 普通卡片列表2
+function getCardLinksDOM(dataList, row) {
   let listDOM = ''
   dataList.forEach(item => {
     listDOM += `
@@ -168,6 +214,24 @@ function getCardListDOM(dataList, row) {
   return listDOM
 }
 
+// 将数据解析成DOM结构 - 普通卡片列表3
+function getCardListDOM(dataList, row) {
+  let listDOM = ''
+  dataList.forEach(item => {
+    listDOM += `
+      <${item.link ? 'a href="' + item.link + '" title="' + item.link + '" target="_blank"' : 'span'} class="card-item ${row ? 'row-' + row : ''}"
+         style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}"
+      >
+        ${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}
+        <div>
+          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>
+          <p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>
+        </div>
+      </${item.link ? 'a' : 'span'}>
+    `
+  })
+  return listDOM
+}
 
 // 将数据解析成DOM结构 - 图文卡片列表
 function getCardImgListDOM(dataList, row) {

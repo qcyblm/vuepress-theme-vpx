@@ -21,7 +21,12 @@
     :rel="rel"
     @focusout="focusoutAction"
   >
-    {{ item.text }}
+    <i 
+      v-if="item.icon"
+      :class="`${item.icon}`"
+    >
+    </i>
+    <span>{{ item.text }}</span>
     <OutboundLink v-if="isBlankTarget" />
   </a>
 </template>

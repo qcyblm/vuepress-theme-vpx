@@ -149,3 +149,10 @@ export default {
   }
 }
 </script>
+
+<!-- 暗黑模式 -->
+<style lang="stylus">
+@require "~@theme/styles/index"
+html,body,.theme-container,header,.links,.sidebar,.nav-dropdown
+  layout_color()
+</style>

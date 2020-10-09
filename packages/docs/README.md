@@ -4,7 +4,7 @@ heroImage: /vpx.png
 heroText: '@qcyblm/vuepress-theme-vpx'
 tagline: '一款基于 VuePress 开发的主题'
 actionText: 快速上手 →
-actionLink: /guide/getting-started
+actionLink: /guide/
 footer: 
 - createYear: 2020
   author: qcyblm
