@@ -78,13 +78,75 @@ palette.styl
 ``` stylus
 // .vuepress/styles/palette.styl
 // 颜色
-$naviconColor = #7f7f7f // 导航栏 icon 颜色
-$scrollbarBgColor = #f1f1f1  // 滚动条背景色
-$scrollbarTopColor = #00caff // 滚动条渐变色(Top)
-$scrollbarBottomColor = #00e2ce // 滚动条渐变色(Bottom)
-$cardBgColor = #fff // 普通、图片卡片背景色
+$accentColor = #2c84d0
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282c34
+$arrowBgColor = #ccc
+$naviconColor = #7f7f7f  // 导航栏 icon 颜色
+$badgeInfoColor = #007bff // 卡片信息边框颜色
+$badgeTipColor = #42b983 // 卡片提示边框颜色
+$badgeWarningColor = #f4cd00 // 卡片注意边框颜色
+$badgeErrorColor = #f66 // 卡片警告边框颜色
+$cardBgColor = #f0f4f8 // 普通、图片卡片背景色
 $cardTitle = #000 // 普通、图片卡片标题色
 $cardTextColor = rgba(19,31,45,0.9) // 普通、图片卡片描述色
 $cardImgFooterBgColor = #fff // 图片卡片“作者”背景色
 $cardImgFooterAuthor = #7f7f7f // 图片卡片“作者”名称的字体颜色
+$scrollbarBgColor = #f1f1f1 // 滚动条背景色
+$scrollbarTopColor = #00caff // 滚动条渐变色(Top)
+$scrollbarBottomColor = #00e2ce // 滚动条渐变色(Bottom)
+
+//暗黑模式
+$dark = {
+    --accentColor: #fff
+    --textColor: #9d9d9d
+    --borderColor: #282828
+    --codeBgColor: #252526
+    --arrowBgColor: #9d9d9d
+    --naviconColor: #7f7f7f
+    --badgeInfoColor: lighten(#007bff,10%)
+    --badgeTipColor: lighten(#42b983,10%)
+    --badgeWarningColor: lighten(#e7c000,10%)
+    --badgeErrorColor: lighten(#f66,10%)
+    --cardBgColor: #606368
+    --cardTitle: #000
+    --cardTextColor: #9d9d9d
+    --cardImgFooterBgColor: #606368
+    --cardImgFooterAuthor: #000
+    --scrollbarBgColor: #f1f1f1
+    --scrollbarTopColor: rgba(0,0,0,.2)
+    --scrollbarBottomColor: rgba(0,0,0,.1)
+}
+```
+### 暗黑模式第三方插件使用
+index.styl示例
+```stylus
+/* ... */
+layout_color(){
+  [data-theme = dark ] & {
+    /* ... */
+    background-color: #35363a
+    color: $dark[--textColor]
+    .action-button{
+      background-color: $dark[--accentColor]
+    }
+    /* ... */
+  }
+}
+/* ... */
+```
+通用styles示例
+```stylus
+/* ... */
+[data-theme = dark ] & {
+  /* ... */
+  background-color: #35363a
+  color: $dark[--textColor]
+  .action-button{
+    background-color: $dark[--accentColor]
+  }
+  /* ... */
+}
+/* ... */
 ```

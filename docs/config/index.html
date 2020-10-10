@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.6.0">
     <link rel="icon" href="/vuepress-theme-vpx/favicon.ico">
     <meta name="description" content="一款基于 VuePress 开发的主题">
-    <link rel="preload" href="/vuepress-theme-vpx/assets/css/0.styles.9f201f31.css" as="style"><link rel="preload" href="/vuepress-theme-vpx/assets/js/app.7b0ea205.js" as="script"><link rel="preload" href="/vuepress-theme-vpx/assets/js/2.d0e87b92.js" as="script"><link rel="preload" href="/vuepress-theme-vpx/assets/js/6.96a16680.js" as="script"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/3.6ff89859.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/4.698bd865.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/5.2c321cd2.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/7.242c38a2.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/8.cd4e0ee1.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/9.d18f1dfd.js">
+    <link rel="preload" href="/vuepress-theme-vpx/assets/css/0.styles.9f201f31.css" as="style"><link rel="preload" href="/vuepress-theme-vpx/assets/js/app.a7cd4318.js" as="script"><link rel="preload" href="/vuepress-theme-vpx/assets/js/2.d0e87b92.js" as="script"><link rel="preload" href="/vuepress-theme-vpx/assets/js/6.64a885d9.js" as="script"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/3.ff22d1e4.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/4.698bd865.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/5.6342e832.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/7.a4ca4da7.js"><link rel="prefetch" href="/vuepress-theme-vpx/assets/js/8.9295ba98.js">
     <link rel="stylesheet" href="/vuepress-theme-vpx/assets/css/0.styles.9f201f31.css">
   </head>
   <body>
@@ -61,16 +61,71 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </code></pre></div><h2 id="样式"><a href="#样式" class="header-anchor">#</a> 样式</h2> <p>palette.styl
 新增的一些变量如下:</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token comment">// .vuepress/styles/palette.styl</span>
 <span class="token comment">// 颜色</span>
-<span class="token variable-declaration"><span class="token variable">$naviconColor</span> <span class="token operator">=</span> <span class="token hexcode">#7f7f7f</span> <span class="token comment">// 导航栏 icon 颜色</span></span>
-<span class="token variable-declaration"><span class="token variable">$scrollbarBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#f1f1f1</span>  <span class="token comment">// 滚动条背景色</span></span>
-<span class="token variable-declaration"><span class="token variable">$scrollbarTopColor</span> <span class="token operator">=</span> <span class="token hexcode">#00caff</span> <span class="token comment">// 滚动条渐变色(Top)</span></span>
-<span class="token variable-declaration"><span class="token variable">$scrollbarBottomColor</span> <span class="token operator">=</span> <span class="token hexcode">#00e2ce</span> <span class="token comment">// 滚动条渐变色(Bottom)</span></span>
-<span class="token variable-declaration"><span class="token variable">$cardBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#fff</span> <span class="token comment">// 普通、图片卡片背景色</span></span>
+<span class="token variable-declaration"><span class="token variable">$accentColor</span> <span class="token operator">=</span> <span class="token hexcode">#2c84d0</span></span>
+<span class="token variable-declaration"><span class="token variable">$textColor</span> <span class="token operator">=</span> <span class="token hexcode">#2c3e50</span></span>
+<span class="token variable-declaration"><span class="token variable">$borderColor</span> <span class="token operator">=</span> <span class="token hexcode">#eaecef</span></span>
+<span class="token variable-declaration"><span class="token variable">$codeBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#282c34</span></span>
+<span class="token variable-declaration"><span class="token variable">$arrowBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#ccc</span></span>
+<span class="token variable-declaration"><span class="token variable">$naviconColor</span> <span class="token operator">=</span> <span class="token hexcode">#7f7f7f</span>  <span class="token comment">// 导航栏 icon 颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$badgeInfoColor</span> <span class="token operator">=</span> <span class="token hexcode">#007bff</span> <span class="token comment">// 卡片信息边框颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$badgeTipColor</span> <span class="token operator">=</span> <span class="token hexcode">#42b983</span> <span class="token comment">// 卡片提示边框颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$badgeWarningColor</span> <span class="token operator">=</span> <span class="token hexcode">#f4cd00</span> <span class="token comment">// 卡片注意边框颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$badgeErrorColor</span> <span class="token operator">=</span> <span class="token hexcode">#f66</span> <span class="token comment">// 卡片警告边框颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$cardBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#f0f4f8</span> <span class="token comment">// 普通、图片卡片背景色</span></span>
 <span class="token variable-declaration"><span class="token variable">$cardTitle</span> <span class="token operator">=</span> <span class="token hexcode">#000</span> <span class="token comment">// 普通、图片卡片标题色</span></span>
 <span class="token variable-declaration"><span class="token variable">$cardTextColor</span> <span class="token operator">=</span> <span class="token func"><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">19</span><span class="token punctuation">,</span><span class="token number">31</span><span class="token punctuation">,</span><span class="token number">45</span><span class="token punctuation">,</span><span class="token number">0.9</span><span class="token punctuation">)</span> </span><span class="token comment">// 普通、图片卡片描述色</span></span>
 <span class="token variable-declaration"><span class="token variable">$cardImgFooterBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#fff</span> <span class="token comment">// 图片卡片“作者”背景色</span></span>
 <span class="token variable-declaration"><span class="token variable">$cardImgFooterAuthor</span> <span class="token operator">=</span> <span class="token hexcode">#7f7f7f</span> <span class="token comment">// 图片卡片“作者”名称的字体颜色</span></span>
+<span class="token variable-declaration"><span class="token variable">$scrollbarBgColor</span> <span class="token operator">=</span> <span class="token hexcode">#f1f1f1</span> <span class="token comment">// 滚动条背景色</span></span>
+<span class="token variable-declaration"><span class="token variable">$scrollbarTopColor</span> <span class="token operator">=</span> <span class="token hexcode">#00caff</span> <span class="token comment">// 滚动条渐变色(Top)</span></span>
+<span class="token variable-declaration"><span class="token variable">$scrollbarBottomColor</span> <span class="token operator">=</span> <span class="token hexcode">#00e2ce</span> <span class="token comment">// 滚动条渐变色(Bottom)</span></span>
+
+<span class="token comment">//暗黑模式</span>
+<span class="token variable-declaration"><span class="token variable">$dark</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">-</span>-accentColor<span class="token punctuation">:</span> <span class="token hexcode">#fff</span>
+    <span class="token operator">-</span>-textColor<span class="token punctuation">:</span> <span class="token hexcode">#9d9d9d</span>
+    <span class="token operator">-</span>-borderColor<span class="token punctuation">:</span> <span class="token hexcode">#282828</span>
+    <span class="token operator">-</span>-codeBgColor<span class="token punctuation">:</span> <span class="token hexcode">#252526</span>
+    <span class="token operator">-</span>-arrowBgColor<span class="token punctuation">:</span> <span class="token hexcode">#9d9d9d</span>
+    <span class="token operator">-</span>-naviconColor<span class="token punctuation">:</span> <span class="token hexcode">#7f7f7f</span>
+    <span class="token operator">-</span>-badgeInfoColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">lighten</span><span class="token punctuation">(</span><span class="token hexcode">#007bff</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token unit">%</span><span class="token punctuation">)</span></span>
+    <span class="token operator">-</span>-badgeTipColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">lighten</span><span class="token punctuation">(</span><span class="token hexcode">#42b983</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token unit">%</span><span class="token punctuation">)</span></span>
+    <span class="token operator">-</span>-badgeWarningColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">lighten</span><span class="token punctuation">(</span><span class="token hexcode">#e7c000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token unit">%</span><span class="token punctuation">)</span></span>
+    <span class="token operator">-</span>-badgeErrorColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">lighten</span><span class="token punctuation">(</span><span class="token hexcode">#f66</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token unit">%</span><span class="token punctuation">)</span></span>
+    <span class="token operator">-</span>-cardBgColor<span class="token punctuation">:</span> <span class="token hexcode">#606368</span>
+    <span class="token operator">-</span>-cardTitle<span class="token punctuation">:</span> <span class="token hexcode">#000</span>
+    <span class="token operator">-</span>-cardTextColor<span class="token punctuation">:</span> <span class="token hexcode">#9d9d9d</span>
+    <span class="token operator">-</span>-cardImgFooterBgColor<span class="token punctuation">:</span> <span class="token hexcode">#606368</span>
+    <span class="token operator">-</span>-cardImgFooterAuthor<span class="token punctuation">:</span> <span class="token hexcode">#000</span>
+    <span class="token operator">-</span>-scrollbarBgColor<span class="token punctuation">:</span> <span class="token hexcode">#f1f1f1</span>
+    <span class="token operator">-</span>-scrollbarTopColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">.2</span><span class="token punctuation">)</span></span>
+    <span class="token operator">-</span>-scrollbarBottomColor<span class="token punctuation">:</span> <span class="token func"><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">.1</span><span class="token punctuation">)</span></span>
+<span class="token punctuation">}</span></span>
+</code></pre></div><h3 id="暗黑模式第三方插件使用"><a href="#暗黑模式第三方插件使用" class="header-anchor">#</a> 暗黑模式第三方插件使用</h3> <p>index.styl示例</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token comment">/* ... */</span>
+<span class="token func"><span class="token function">layout_color</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span></span>
+  <span class="token selector">[data-theme = dark ] &amp; <span class="token punctuation">{</span></span>
+    <span class="token comment">/* ... */</span>
+    <span class="token property-declaration"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#35363a</span></span>
+    <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> $dark<span class="token punctuation">[</span><span class="token operator">-</span>-textColor<span class="token punctuation">]</span></span>
+    <span class="token selector">.action-button<span class="token punctuation">{</span></span>
+      <span class="token property-declaration"><span class="token property">background-color</span><span class="token punctuation">:</span> $dark<span class="token punctuation">[</span><span class="token operator">-</span>-accentColor<span class="token punctuation">]</span></span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* ... */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* ... */</span>
+</code></pre></div><p>通用styles示例</p> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token selector"><span class="token comment">/* ... */</span>
+[data-theme = dark ] &amp; <span class="token punctuation">{</span></span>
+  <span class="token comment">/* ... */</span>
+  <span class="token property-declaration"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#35363a</span></span>
+  <span class="token property-declaration"><span class="token property">color</span><span class="token punctuation">:</span> $dark<span class="token punctuation">[</span><span class="token operator">-</span>-textColor<span class="token punctuation">]</span></span>
+  <span class="token selector">.action-button<span class="token punctuation">{</span></span>
+    <span class="token property-declaration"><span class="token property">background-color</span><span class="token punctuation">:</span> $dark<span class="token punctuation">[</span><span class="token operator">-</span>-accentColor<span class="token punctuation">]</span></span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">/* ... */</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* ... */</span>
 </code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/qcyblm/vuepress-theme-vpx/edit/master//packages/docs/config/README.md" target="_blank" rel="noopener noreferrer">编辑当前页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年9月27日星期日晚上8点28分</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/vuepress-theme-vpx/assets/js/app.7b0ea205.js" defer></script><script src="/vuepress-theme-vpx/assets/js/2.d0e87b92.js" defer></script><script src="/vuepress-theme-vpx/assets/js/6.96a16680.js" defer></script>
+    <script src="/vuepress-theme-vpx/assets/js/app.a7cd4318.js" defer></script><script src="/vuepress-theme-vpx/assets/js/2.d0e87b92.js" defer></script><script src="/vuepress-theme-vpx/assets/js/6.64a885d9.js" defer></script>
   </body>
 </html>

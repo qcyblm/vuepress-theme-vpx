@@ -34,7 +34,7 @@ module.exports = {
 :::
 ## 贡献者
 
-[<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing-doc "Evan Xu")
+[<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing "Evan Xu")[<img src="https://avatars.githubusercontent.com/chioio" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/chioio "Tenn Chio")
 
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 

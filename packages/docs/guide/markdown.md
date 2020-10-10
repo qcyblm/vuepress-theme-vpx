@@ -41,8 +41,6 @@ Markdown 容器是对 Markdown 语法的一个扩展，使用简单的语法就�
 这是一条警告
 :::
 
-
-
 ## 布局容器
 **输入**
 ```` md
@@ -114,7 +112,7 @@ console.log('这是一个详情块')
 ```yaml
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
-  avatar: https://avatars.githubusercontent.com/qcyblm
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
   link: https://blog.azan.one/
   nameColor: ''
   bgColor: ''
@@ -126,7 +124,7 @@ console.log('这是一个详情块')
 ```yaml
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
-  avatar: https://avatars.githubusercontent.com/qcyblm
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
   link: https://blog.azan.one/
   nameColor: ''
   bgColor: ''
@@ -152,7 +150,7 @@ console.log('这是一个详情块')
 ```yaml
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
-  avatar: https://avatars.githubusercontent.com/qcyblm
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
   link: https://blog.azan.one/
   nameColor: ''
   bgColor: ''
@@ -164,7 +162,7 @@ console.log('这是一个详情块')
 ```yaml
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
-  avatar: https://avatars.githubusercontent.com/qcyblm
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
   link: https://blog.azan.one/
   nameColor: ''
   bgColor: ''
@@ -172,7 +170,6 @@ console.log('这是一个详情块')
 ```
 :::
 ````
-
 
 ### 语法
 ````md
@@ -244,9 +241,6 @@ console.log('这是一个详情块')
 ```
 :::
 
-
-
-
 ## 图文卡片列表
 
 图文卡片列表容器，可用于`项目展示`、`产品展示`等。
@@ -262,7 +256,7 @@ console.log('这是一个详情块')
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容 # 描述（可选）
   author: qcyblm # 作者（可选）
   authorLink: 'https://github.com/qcyblm'
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4 # 头像（可选）
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80 # 头像（可选）
   nameColor: '#768BFE'
   bgColor: '#E5E5E5'
   textColor: 'red'
@@ -273,13 +267,13 @@ console.log('这是一个详情块')
   name: 标题
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容
   author: qcyblm
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
 - img: '/vuepress-theme-vpx/assets/img/output.jpg'
   link: '#'
   name: 标题
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容
   author: qcyblm
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
 ```
 :::
 
@@ -293,7 +287,7 @@ console.log('这是一个详情块')
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容 # 描述（可选）
   author: qcyblm # 作者（可选）
   authorLink: 'https://github.com/qcyblm'
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4 # 头像（可选）
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80 # 头像（可选）
   nameColor: '#768BFE'
   bgColor: '#E5E5E5'
   textColor: 'red'
@@ -304,13 +298,13 @@ console.log('这是一个详情块')
   name: 标题
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容
   author: qcyblm
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
 - img: '/vuepress-theme-vpx/assets/img/output.jpg'
   link: '#'
   name: 标题
   desc: 描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容
   author: qcyblm
-  avatar: https://avatars2.githubusercontent.com/u/64412486?s=60&v=4
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
 ```
 :::
 ````
