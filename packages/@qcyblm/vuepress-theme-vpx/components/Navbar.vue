@@ -16,7 +16,6 @@
         v-if="$siteTitle"
         ref="siteName"
         class="site-name"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
       >{{ $siteTitle }}</span>
     </RouterLink>
 
@@ -100,10 +99,17 @@ $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
 .navbar
+  background-color #fff
+  border-bottom 1px solid $borderColor
   padding $navbar-vertical-padding $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
   a, span, img
     display inline-block
+  .home-link
+    &:hover
+      text-decoration none
+      .site-name
+        color $accentColor
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
@@ -112,7 +118,7 @@ $navbar-horizontal-padding = 1.5rem
   .site-name
     font-size 1.3rem
     font-weight 600
-    color $textColor
+    color $titleColor
     position relative
   .links
     padding-left 1.5rem
@@ -140,4 +146,57 @@ $navbar-horizontal-padding = 1.5rem
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+
+[data-theme = dark ] & {
+  .navbar{
+    border-bottom: 1px solid $dark[--borderColor]
+    background-color: #35363a
+    .home-link{
+      &:hover{
+        .site-name{
+          color: $dark[--accentColor]
+        }
+      }
+    }
+    .site-name{
+      color: $dark[--titleColor]
+    }
+    .links{
+      background-color: #35363a
+      .search-box{
+        input{
+          color: lighten($dark[--textColor], 25%)
+          background-color: #292a2d
+          border: 1px solid darken($dark[--borderColor], 10%)
+          &:focus{
+            border-color: $dark[--accentColor]
+          }
+        }
+        .suggestions{
+          background: #292a2d
+          border: 1px solid darken($dark[--borderColor], 10%)
+        }
+        .suggestion{
+          a{
+            color: lighten($dark[--textColor], 35%)
+          }
+          &.focused{
+            background-color: #f3f4f5
+            a{
+              color: $dark[--accentColor]
+            }
+          }
+        }
+      }
+      @media (max-width: $MQNarrow){
+        .search-box{
+          input{
+            border-color transparent
+          }
+        }
+      }
+    }
+  }
+}
+
 </style>

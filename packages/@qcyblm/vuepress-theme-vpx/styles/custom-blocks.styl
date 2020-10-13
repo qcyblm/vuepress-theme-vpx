@@ -1,31 +1,78 @@
 .custom-block
+  position relative
+  border-radius 8px
   .custom-block-title
     font-weight 600
     margin-bottom -0.4rem
-  &.tip, &.warning, &.danger
+   &.info, &.tip, &.warning, &.danger
     padding .1rem 1.5rem
     border-left-width .5rem
     border-left-style solid
     margin 1rem 0
-  &.tip
-    background-color #f3f5f7
-    border-color #42b983
+  &::before {
+    position absolute
+    top 19px
+    left -14px
+    color #fff
+    width 20px
+    height 20px
+    border-radius: 100%
+    text-align center
+    line-height 20px
+    font-weight bold
+    font-family 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+    font-size 14px
+  }
+  &.info {
+    border-color $badgeInfoColor
+    background-color #f8f8f8
+    &::before {
+      content url('https://v3.vuejs.org/images/icons/info.svg')
+      width 25px
+      height 25px
+      left -16px
+      box-sizing border-box
+    }
+  }
+  &.tip {
+    border-color $badgeTipColor
+    background-color #f8f8f8
+    &::before {
+      content url('https://v3.vuejs.org/images/icons/bulb.svg')
+      width 25px
+      height 25px
+      left -16px
+    }
+  }
   &.warning
-    background-color rgba(255,229,100,.3)
-    border-color darken(#ffe564, 35%)
+    border-color $badgeWarningColor
+    background-color #f8f8f8
     color darken(#ffe564, 70%)
     .custom-block-title
-      color darken(#ffe564, 50%)
+      color #222
     a
       color $textColor
+    &::before {
+      content url('https://v3.vuejs.org/images/icons/danger.svg')
+      width 25px
+      height 25px
+      left -16px
+      box-sizing border-box
+    }
   &.danger
-    background-color #ffe6e6
-    border-color darken(red, 20%)
+    border-color $badgeErrorColor
+    background-color #f8f8f8
     color darken(red, 70%)
     .custom-block-title
-      color darken(red, 40%)
+      color #222
     a
       color $textColor
+    &::before {
+      content url('https://v3.vuejs.org/images/icons/stop.svg')
+      width 25px
+      height 25px
+      left -16px
+    }
   &.details
     display block
     position relative
@@ -42,3 +89,56 @@
     summary
       outline none
       cursor pointer
+  &.theorem
+    margin 1rem 0
+    padding .1rem 1.5rem
+    border-radius 0.4rem
+    background-color #f0f4f8
+    .title
+      font-weight bold
+  &.right
+    color transparentify($textColor, 0.4)
+    font-size 0.9rem
+    text-align right
+
+[data-theme = dark ] & {
+  .custom-block{
+    &.info{
+      border-color: $dark[--badgeInfoColor]
+      background-color: rgba(243,245,247,.2)
+    }
+    &.tip{
+      border-color: $dark[--badgeTipColor]
+      background-color: rgba(243,245,247,.2)
+    }
+    &.warning{
+      border-color: $dark[--badgeWarningColor]
+      background-color: rgba(243,245,247,.2)
+      a{
+        color: $dark[--textColor]
+      }
+      .custom-block-title{
+        color #222
+      }
+      p{
+        color: #e7c000
+      }
+    }
+    &.danger{
+      border-color: $dark[--badgeErrorColor]
+      background-color: rgba(243,245,247,.2)
+      a{
+        color: $dark[--textColor]
+      }
+    }
+    &.details{
+      background-color: #202124
+    }
+    &.theorem{
+      background-color: #27272b
+    }
+    &.right{
+      color: transparentify($dark[--textColor], 0.8)
+    }
+  }
+}

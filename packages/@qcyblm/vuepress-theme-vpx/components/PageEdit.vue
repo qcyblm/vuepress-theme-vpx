@@ -133,6 +133,8 @@ export default {
     a
       color lighten($textColor, 25%)
       margin-right 0.25rem
+      &:hover
+        color lighten($accentColor, 10%)
   .last-updated
     float right
     font-size 0.9em
@@ -152,4 +154,14 @@ export default {
       float none
       text-align left
 
+[data-theme = dark ] & {
+  .page-edit{
+    .edit-link a,.last-updated .prefix{
+      color: lighten($dark[--textColor], 25%)
+      &:hover{
+        color: lighten($dark[--accentColor], 10%)
+      }
+    }
+  }
+}
 </style>

@@ -69,13 +69,13 @@ export default {
   .light
     background-color #dfdfdf
     span
-      background-color #303030
+      background-color #35363a
       transform translateX(0%)
       color #FFF
   .dark
     background-color #404040
     span
-      background-color #FFFFFF
+      background-color rgba(255,255,255,.8)
       transform translateX(50%)
       right 11px
       color #000

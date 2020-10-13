@@ -160,4 +160,9 @@ function flatten (items, res) {
     overflow auto // clear float
   .next
     float right
+[data-theme = dark ] & {
+  .page-nav .inner{
+    border-top: 1px solid $dark[--borderColor]
+  }
+}
 </style>

@@ -27,6 +27,8 @@ export default {
 
 <style lang="stylus">
 .sidebar
+  background-color #fff
+  border-right 1px solid $borderColor
   ul
     padding 0
     margin 0
@@ -61,4 +63,14 @@ export default {
         top calc(1rem - 2px)
     & > .sidebar-links
       padding 1rem 0
+
+[data-theme = dark ] & {
+  .sidebar{
+    background-color: #35363a
+    border-right: 1px solid $dark[--borderColor]
+    .nav-links{
+      border-bottom: 1px solid $dark[--borderColor]
+    }
+  }
+}
 </style>

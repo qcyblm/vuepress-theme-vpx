@@ -261,4 +261,42 @@ export default {
       border-radius 0.25rem
       white-space nowrap
       margin 0
+  [data-theme = dark ] & {
+    .dropdown-wrapper{
+      .nav-dropdown{
+        background-color: #35363a
+      }
+    }
+  }
+
+[data-theme = dark ] & {
+  .dropdown-wrapper{
+    .dropdown-title{
+      color: $dark[--textColor]
+    }
+    .mobile-dropdown-title{
+      font-size: inherit
+        &:hover{
+          color: $dark[--accentColor]
+        }
+    }
+    .nav-dropdown{
+      .dropdown-item a{
+        &:hover{
+          color: $dark[--accentColor]
+        }
+        &.router-link-active{
+          color: $dark[--accentColor]
+          &::after{
+            border-left: 5px solid $dark[--accentColor]
+            border-top: 3px solid transparent
+            border-bottom: 3px solid transparent
+          }
+        }
+      }
+    }
+  }
+
+}
+
 </style>

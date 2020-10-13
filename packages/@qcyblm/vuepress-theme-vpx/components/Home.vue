@@ -16,7 +16,6 @@
       >
         {{ data.heroText || $title || 'Hello' }}
       </h1>
-
       <p
         v-if="data.tagline !== null"
         class="description"
@@ -118,14 +117,20 @@ export default {
       color #fff
       background-color $accentColor
       padding 0.8rem 1.6rem
-      border-radius 4px
+      border-radius 99px
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
       &:hover
         background-color lighten($accentColor, 10%)
+        box-shadow 0 10px 20px -10px #999
+        transform translateY(-5px)
+        text-decoration none
+        span
+          text-shadow 3px 2px 5px rgba(0, 0, 0, 0.15)
   .features
     border-top 1px solid $borderColor
+    border-bottom 1px solid $borderColor
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -153,7 +158,8 @@ export default {
     a
       color lighten($textColor, 25%)
       &:hover
-        color #2c3e50
+        color $accentColor
+        text-decoration none
     .beian
       padding-top 1rem
 
@@ -164,7 +170,10 @@ export default {
     .feature
       max-width 100%
       padding 0 2.5rem
-
+    .footer
+      padding 0.8rem
+      .beian
+        padding-top .25rem
 @media (max-width: $MQMobileNarrow)
   .home
     padding-left 1.5rem
@@ -189,4 +198,44 @@ export default {
       font-size 0.75rem
       span
         overflow-wrap break-word
+
+[data-theme = dark ] & {
+  .home{
+    .hero{
+      .description{
+        color: lighten($dark[--textColor], 40%)
+      }
+      .action-button{
+        color: #35363a
+        background-color: $dark[--accentColor]
+        border-bottom: 1px solid darken($dark[--accentColor], 10%)
+        &:hover{
+          background-color: lighten($dark[--accentColor], 20%)
+        }
+      }
+    }
+    .features{
+      border-top: 1px solid $dark[--borderColor]
+      border-bottom: 1px solid $dark[--borderColor]
+    }
+    .feature{
+      h2{
+        color: lighten($dark[--textColor], 10%)
+      }
+      p{
+        color: lighten($dark[--textColor], 25%)
+      }
+    }
+    .footer{
+      border-top: 1px solid $dark[--borderColor]
+      color: lighten($dark[--textColor], 25%)
+      a{
+        color: lighten($dark[--textColor], 25%)
+        &:hover{
+          color: $dark[--accentColor]
+        }
+      }
+    }
+  }
+}
 </style>

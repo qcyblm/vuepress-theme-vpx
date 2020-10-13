@@ -3,7 +3,7 @@ const yaml = require('js-yaml');
 const CARD_LINKS = 'cardLinks';
 const CARD_LINK = 'cardLink';
 const CARD_LIST = 'cardList';
-const CARD_IMG_LIST = 'cardImgList';
+const CARD_IMG_LIST = 'cardImgList'
 
 // Theme API.
 module.exports = (options, ctx) => {
@@ -205,7 +205,7 @@ function getCardLinksDOM(dataList, row) {
       >
         ${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}
         <div>
-          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>
+          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>
           <p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>
         </div>
       </${item.link ? 'a' : 'span'}>
@@ -224,7 +224,7 @@ function getCardListDOM(dataList, row) {
       >
         ${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}
         <div>
-          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>
+          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>
           <p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>
         </div>
       </${item.link ? 'a' : 'span'}>
@@ -249,7 +249,7 @@ function getCardImgListDOM(dataList, row) {
         ? `<div class="box-info"
               style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}">
               <a href="${item.link}" title="${item.link}" target="_blank">
-              ${item.name ? `<p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>` : ''}
+              ${item.name ? `<p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>` : ''}
               ${item.desc ? `<p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>` : ''}
               </a>
             </div>`
@@ -261,7 +261,7 @@ function getCardImgListDOM(dataList, row) {
              style="${item.authorbgColor ? 'background-color:' + item.authorbgColor + ';' : ''}">
               <a href="${item.authorLink || item.link}" title="${item.authorLink || item.link}" target="_blank">
                 ${item.avatar ? `<img src="${item.avatar}" class="no-zoom">` : ''}
-                ${item.author ? `<span style="${item.authorColor ? 'color:' + item.authorColor + ';' : ''}">${item.author}</span>` : ''}
+                ${item.author ? `<span style="${item.authorColor ? 'color:' + item.authorColor + ';' : ''}">${item.author}<OutboundLink /></span>` : ''}
               </a>
             </div>`
         : ''

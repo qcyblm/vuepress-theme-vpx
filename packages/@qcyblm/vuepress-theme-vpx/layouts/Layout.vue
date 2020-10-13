@@ -40,6 +40,8 @@
         <slot name="page-bottom" />
       </template>
     </Page>
+
+    <BackToTop v-if="$themeConfig.BackToTop !== false" />
   </div>
 </template>
 
@@ -48,6 +50,7 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import BackToTop from '@theme/components/BackToTop.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
@@ -57,7 +60,8 @@ export default {
     Home,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+    BackToTop
   },
 
   data () {
@@ -149,10 +153,3 @@ export default {
   }
 }
 </script>
-
-<!-- 暗黑模式 -->
-<style lang="stylus">
-@require "~@theme/styles/index"
-html,body,.theme-container,header,.links,.sidebar,.nav-dropdown
-  layout_color()
-</style>

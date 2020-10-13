@@ -141,13 +141,20 @@ export default {
   a
     line-height 1.4rem
     color inherit
-    &:hover, &.router-link-active
+    &:hover
       color $accentColor
+    &.router-link-active
+      color $accentColor
+      .fa,.fab,span
+        color $accentColor
   .nav-item
     position relative
     display inline-block
     margin-left 1.5rem
     line-height 2rem
+    a 
+      &:hover
+        color $accentColor
     &:first-child
       margin-left 0
     .fab,.fa
@@ -156,6 +163,8 @@ export default {
     margin-left 1.5rem
     .fab,.fa
       color $naviconColor
+    &:hover
+      color $accentColor
 
 @media (max-width: $MQMobile)
   .nav-links
@@ -170,4 +179,56 @@ export default {
     &:hover, &.router-link-active
       margin-bottom -2px
       border-bottom 2px solid lighten($accentColor, 8%)
+
+[data-theme = dark ] & {
+  .nav-links{
+    a{
+      color: inherit
+      &:hover{
+        color: $dark[--accentColor]
+        span{
+          color: $dark[--accentColor]
+        }
+      }
+      &.router-link-active{
+        color: $dark[--accentColor]
+        .fa,.fab,span{
+          color: $dark[--accentColor]
+        }
+      }
+    }
+    .nav-item{
+      a{
+        &:hover{
+          color: $dark[--accentColor]
+        }
+      }
+      .fab,.fa{
+        color: $dark[--naviconColor]
+      }
+    }
+    .repo-link{
+      .fab,.fa{
+        color: $dark[--naviconColor]
+      }
+      &:hover{
+        color: $dark[--accentColor]
+      }
+    }
+  }
+  @media (min-width: $MQMobile){
+    .nav-links{
+      a{
+        &:hover, &.router-link-active{
+          color: $dark[--textColor]
+        }
+      }
+    }
+    .nav-item > a:not(.external){
+      &:hover, &.router-link-active{
+        border-bottom: 2px solid lighten($dark[--accentColor], 8%)
+      }
+    }
+  }
+}
 </style>

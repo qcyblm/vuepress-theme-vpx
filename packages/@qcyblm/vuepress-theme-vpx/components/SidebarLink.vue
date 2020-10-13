@@ -130,4 +130,17 @@ a.sidebar-link
     border-left none
     &.active
       font-weight 500
+
+[data-theme = dark ] & {
+  a.sidebar-link{
+    color: $dark[--textColor]
+    &:hover{
+      color: $dark[--accentColor]
+    }
+    &.active{
+      color: $dark[--accentColor]
+      border-left-color: $dark[--accentColor]
+    }
+  }
+}
 </style>

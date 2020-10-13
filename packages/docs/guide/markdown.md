@@ -1,4 +1,4 @@
-# Markdown 容器 <Badge text="By Evan Xu"/>
+# Markdown 容器
 
 Markdown 容器是对 Markdown 语法的一个扩展，使用简单的语法就可以在页面中呈现丰富的效果。
 
@@ -101,8 +101,28 @@ console.log('这是一个详情块')
 **输出**
 ::: cardLink
 ```yaml
-- name: 青春永不落幕
-  link: https://qcyblm.github.io
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
   nameColor: ''
   bgColor: ''
 ```
@@ -113,7 +133,21 @@ console.log('这是一个详情块')
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
-  link: https://blog.azan.one/
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
   nameColor: ''
   bgColor: ''
   textColor: ''
@@ -125,7 +159,21 @@ console.log('这是一个详情块')
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
-  link: https://blog.azan.one/
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
   nameColor: ''
   bgColor: ''
   textColor: ''
@@ -139,8 +187,28 @@ console.log('这是一个详情块')
 
 ::: cardLink
 ```yaml
-- name: 青春永不落幕
-  link: https://qcyblm.github.io
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
+  nameColor: ''
+  bgColor: ''
+- name: 介绍
+  link: ./
   nameColor: ''
   bgColor: ''
 ```
@@ -151,7 +219,21 @@ console.log('这是一个详情块')
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
-  link: https://blog.azan.one/
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
   nameColor: ''
   bgColor: ''
   textColor: ''
@@ -163,7 +245,21 @@ console.log('这是一个详情块')
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
-  link: https://blog.azan.one/
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
+  nameColor: ''
+  bgColor: ''
+  textColor: ''
+- name: 青春永不落幕
+  desc: 一位静态网站设计爱好者
+  avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
+  link: https://qcyblm.github.io/
   nameColor: ''
   bgColor: ''
   textColor: ''
@@ -182,7 +278,7 @@ console.log('这是一个详情块')
 ```
 :::
 
-::: cardLinks <每行显示数量> or cardList <每行显示数量>
+::: cardLinks <每行显示数量> <!-- or cardList <每行显示数量> -->
 ``` yaml
 - name: 名称
   desc: 描述
@@ -213,15 +309,16 @@ console.log('这是一个详情块')
 ```` md
 ::: cardList 2
 ```yaml
-- name: 《静夜思》
-  desc: 床前明月光，疑是地上霜。举头望明月，低头思故乡。
+- name: vuepress-theme-vpx
+  desc: 一款基于 VuePress 开发的主题
+  link: https://qcyblm.github.io/vuepress-theme-vpx/
   bgColor: '#F0DFB1'
   textColor: '#242A38'
-- name: VPX
-  desc: 一款基于 VuePress 的开发主题
-  link: https://github.com/qcyblm/vuepress-theme-vpx
-  bgColor: '#DFEEE7'
-  textColor: '#2A3344'
+- name: vuepress-theme-vpx
+  desc: 一款基于 VuePress 开发的主题
+  link: https://qcyblm.github.io/vuepress-theme-vpx/
+  bgColor: '#F0DFB1'
+  textColor: '#242A38'
 ```
 :::
 ````
@@ -229,15 +326,16 @@ console.log('这是一个详情块')
 **输出**
 ::: cardList 2
 ```yaml
-- name: 《静夜思》
-  desc: 床前明月光，疑是地上霜。举头望明月，低头思故乡。
+- name: vuepress-theme-vpx
+  desc: 一款基于 VuePress 开发的主题
+  link: https://qcyblm.github.io/vuepress-theme-vpx/
   bgColor: '#F0DFB1'
   textColor: '#242A38'
-- name: VPX
-  desc: 一款基于 VuePress 的开发主题
-  link: https://github.com/qcyblm/vuepress-theme-vpx
-  bgColor: '#DFEEE7'
-  textColor: '#2A3344'
+- name: vuepress-theme-vpx
+  desc: 一款基于 VuePress 开发的主题
+  link: https://qcyblm.github.io/vuepress-theme-vpx/
+  bgColor: '#F0DFB1'
+  textColor: '#242A38'
 ```
 :::
 

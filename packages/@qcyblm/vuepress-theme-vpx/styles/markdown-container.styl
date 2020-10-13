@@ -1,131 +1,4 @@
 // markdown容器样式
-
-.custom-block {
-  position: relative;
-  border-radius 8px
-
-  &::before {
-    position: absolute;
-    top: 19px;
-    left: -14px;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 20px;
-    font-weight: bold;
-    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-  }
-
-  .custom-block-title {
-    font-weight: 600;
-    margin-bottom: -0.4rem;
-  }
-
-  &.info {
-    border-color: $badgeInfoColor
-    background-color: #f8f8f8
-    padding 0.1rem 1.5rem
-    border-left-width 0.5rem
-    border-left-style solid
-    margin 1rem 0
-
-    &::before {
-      content: url('https://v3.vuejs.org/images/icons/info.svg')
-      width: 25px
-      height: 25px
-      left: -16px
-      box-sizing: border-box
-    }
-  }
-
-  &.tip {
-    border-color: $badgeTipColor;
-    background-color: #f8f8f8;
-
-    &::before {
-      content: url('https://v3.vuejs.org/images/icons/bulb.svg');
-      width: 25px;
-      height: 25px;
-      left: -16px;
-    }
-  }
-
-  &.warning {
-    border-color: $badgeWarningColor
-    background-color: #f8f8f8
-
-    .custom-block-title {
-      color: #222;
-    }
-
-    &::before {
-      content: url('https://v3.vuejs.org/images/icons/danger.svg');
-      width: 25px;
-      height: 25px;
-      left: -16px;
-      box-sizing: border-box;
-    }
-  }
-
-  &.danger {
-    border-color: $badgeErrorColor
-    background-color: #f8f8f8;
-
-    .custom-block-title {
-      color: #222;
-    }
-
-    &::before {
-      content: url('https://v3.vuejs.org/images/icons/stop.svg');
-      width: 25px;
-      height: 25px;
-      left: -16px;
-    }
-  }
-
-  &.details {
-    display: block;
-    position: relative;
-    border-radius: 2px;
-    margin: 1.6em 0;
-    padding: 1.6em;
-    background-color: #eee;
-    h4 {
-      margin-top: 0;
-    }
-    figure,
-    p {
-      &:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-    }
-    summary {
-      outline: none;
-      cursor: pointer;
-    }
-  }
-
-  &.theorem{
-    margin 1rem 0
-    padding .1rem 1.5rem
-    border-radius 0.4rem
-    background-color #f0f4f8
-    .title{
-      font-weight bold
-    }
-  }
-
-  &.right{
-    color transparentify($textColor, 0.4)
-    font-size 0.9rem
-    text-align right
-  }
-}
-
 // 居中容器
 .center-container
   text-align center
@@ -170,7 +43,7 @@ h1, h2, h3, h4, h5, h6
         text-align center
       .name
         margin .2rem 0 .3rem 0
-        color $cardTitle
+        color $cardTitleColor
         font-weight 500
 
 // 普通卡片列表2
@@ -192,9 +65,10 @@ h1, h2, h3, h4, h5, h6
       box-shadow 1px 1px 2px 0 rgba(0,0,0,.06)
       transition all .4s
       &:hover
-        text-decoration none
         box-shadow 0 10px 20px -10px #999
         transform translateY(-5px)
+        .name
+          text-decoration underline $accentColor
         img 
           transform rotate(8deg) scale(1.1, 1.1)
           box-shadow 3px 2px 7px rgba(0, 0, 0, 0.15)
@@ -220,7 +94,7 @@ h1, h2, h3, h4, h5, h6
           transition text-shadow .4s
         .name
           margin .2rem 0 .3rem 0
-          color $cardTitle
+          color $cardTitleColor
           font-weight 500
           white-space nowrap
         .desc
@@ -263,7 +137,6 @@ h1, h2, h3, h4, h5, h6
       box-shadow 1px 1px 2px 0 rgba(0,0,0,.06)
       transition all .4s
       &:hover
-        text-decoration none
         box-shadow 0 10px 20px -10px #999
         transform translateY(-5px)
         .name
@@ -294,8 +167,8 @@ h1, h2, h3, h4, h5, h6
           text-align center
         .name
           margin .2rem 0 .3rem 0
-          color $cardTitle
-          font-weight bold
+          color $cardTitleColor
+          font-weight 500
         .desc
           font-size .8rem
           line-height 1.1rem
@@ -373,8 +246,8 @@ h1, h2, h3, h4, h5, h6
             color $accentColor !important
             text-decoration underline
         .name
-          color $cardTitle
-          font-weight bold
+          color $cardTitleColor
+          font-weight 500
           text-align center
         p
           margin 0
@@ -391,7 +264,7 @@ h1, h2, h3, h4, h5, h6
         border-top  1px solid $borderColor
         background-color $cardImgFooterBgColor
         span
-          color $cardImgFooterAuthor
+          color $cardImgFooterAuthorColor
         img
           width 1.8rem
           height 1.8rem
@@ -468,63 +341,30 @@ h1, h2, h3, h4, h5, h6
 
 // 暗黑模式
 [data-theme = dark ] & {
-  .custom-block{
-    &.info{
-      border-color: $dark[--badgeInfoColor]
-      background-color: rgba(243,245,247,.2)
-    }
-    &.tip{
-      border-color: $dark[--badgeTipColor]
-      background-color: rgba(243,245,247,.2)
-    }
-    &.warning{
-      border-color: $dark[--badgeWarningColor]
-      background-color: rgba(243,245,247,.2)
-      .custom-block-title {
-        color: #222;
-      }
-      p{
-        color #e7c000
-      }
-    }
-    &.danger{
-      border-color: $dark[--badgeErrorColor]
-      background-color: rgba(243,245,247,.2)
-    }
-    &.right{
-      color: transparentify($dark[--textColor])
-      p{
-        color: #bcc0c5
-        a{
-          color: $dark[--accentColor]
-        }
-      }
-    }
-    &.details{
-      background-color: #202124
-    }
-    &.theorem{
-      background-color: #27272b
-    }
-  }
   .card-list{
     .card-item{
       background-color: $dark[--cardBgColor]
       color: $dark[--cardTextColor]
-      .name{
-        color: $dark[--cardTitle]
+      p.name{
+        color: $dark[--cardTitleColor]
       }
       p.desc,a{
         color: $dark[--cardTextColor]
       }
       .box-info{
+        .name{
+          color: $dark[--cardTitleColor]
+        }
+        p.desc{
+          color: $dark[--cardTextColor]
+        }
         background-color: $dark[--cardBgColor]
       }
       .box-footer{
         border-top-color: $dark[--borderColor]
         background-color: $dark[--cardImgFooterBgColor]
         span{
-          color: $dark[--cardImgFooterAuthor]
+          color: $dark[--cardImgFooterAuthorColor]
         }
       }
     }

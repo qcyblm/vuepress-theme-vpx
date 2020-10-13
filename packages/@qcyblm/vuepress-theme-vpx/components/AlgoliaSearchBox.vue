@@ -168,4 +168,34 @@ export default {
       margin -3px 3px 0
       vertical-align middle
 
+[data-theme = dark ] & {
+  .algolia-search-wrapper{
+    .algolia-autocomplete{
+      .ds-dropdown-menu
+        background-color: #35363a
+        .ds-suggestion{
+          border-bottom: 1px solid $dark[--borderColor]
+        }
+      .algolia-docsearch-suggestion{
+        border-color: $dark[--borderColor]
+        .algolia-docsearch-suggestion--category-header{
+          background: $dark[--accentColor]
+          color: #35363a
+        }
+        .algolia-docsearch-suggestion--title{
+          color: $dark[--textColor]
+        }
+        .algolia-docsearch-suggestion--subcategory-column{
+          border-color: $dark[--borderColor]
+        }
+      }
+      .algolia-docsearch-footer{
+        border-color: $dark[--borderColor]
+      }
+      .ds-cursor .algolia-docsearch-suggestion--content{
+        color: $dark[--textColor]
+      }
+    }
+  }
+}
 </style>

@@ -138,4 +138,19 @@ export default {
   transition height .1s ease-out
   font-size 0.95em
   overflow hidden
+
+[data-theme = dark ] & {
+  .sidebar-heading{
+    color: $dark[--textColor]
+    &.clickable{
+      &.active{
+        color: $dark[--accentColor]
+        border-left-color: $dark[--accentColor]
+      }
+      &:hover{
+        color: $dark[--accentColor]
+      }
+    }
+  }
+}
 </style>
