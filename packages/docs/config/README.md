@@ -54,6 +54,16 @@ module.exports = {
   }
 }
 ```
+## 返回顶部按钮
+使用的是[@vuepress/plugin-back-to-top](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-back-to-top)第三方组件，已内置主题，修改图标为 'fa fa-arrow-up'
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    BackToTop: true,  //  填写 `true` or `false` ，默认 `true`
+  }
+}
+```
 ## 多语言支持
 新增 `icon` 图标 
 
