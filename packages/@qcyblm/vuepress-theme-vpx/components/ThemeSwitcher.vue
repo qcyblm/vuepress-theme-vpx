@@ -79,4 +79,11 @@ export default {
       transform translateX(50%)
       right 11px
       color #000
+@media (max-width: $MQMobile) 
+  .theme-switcher
+    width 1rem
+    .dark
+      span
+        transform translateX(0%)
+        left 0
 </style>

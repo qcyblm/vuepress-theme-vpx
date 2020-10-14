@@ -147,6 +147,9 @@ export default {
 <style lang="stylus">
 .dropdown-wrapper
   cursor pointer
+  button
+    border none
+    outline none
   .dropdown-title
     display block
     font-size 0.9rem
@@ -275,6 +278,7 @@ export default {
       color: $dark[--textColor]
     }
     .mobile-dropdown-title{
+      color: $dark[--textColor]
       font-size: inherit
         &:hover{
           color: $dark[--accentColor]
