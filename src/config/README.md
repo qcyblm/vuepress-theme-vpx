@@ -46,7 +46,7 @@ module.exports = {
 module.exports = {
   themeConfig: {
     //  填写 Git 服务商链接
-    repoPlatform: 'https://github.io',
+    repoPlatform: 'https://github.com/',
     // 填写 Git 仓库地址
     repo: '<USERNAME>/<REPO>', // or '<USERNAME>'
     // 自定义icon图标（可选）
