@@ -101,9 +101,9 @@ export default {
       const { repo } = this.$site.themeConfig
       const { repoPlatform } = this.$site.themeConfig
       if (repo) {
-        return /^https?:/.test(repo)
+        return /^http[s]?:\/\/[^/:\^A-Z]+\.[^A-Z]+\//.test(repo)
           ? repo
-          : `https://${ repoPlatform || 'GitHub' }.com/${ repo }`
+          : `${ repoPlatform }/${ repo }`
       }
       return null
     },
@@ -120,7 +120,7 @@ export default {
         return this.$site.themeConfig.repoLabel
       }
 
-      const repoHost = this.repoLink.match(/^https?:\/\/[^/]+/)[0]
+      const repoHost = this.repoLink.match(/^http[s]?:\/\/[^/:\^A-Z]+\.[^A-Z]+\//)[0]
       const platforms = ['GitHub', 'GitLab', 'Bitbucket','Gitee']
       for (let i = 0; i < platforms.length; i++) {
         const platform = platforms[i]

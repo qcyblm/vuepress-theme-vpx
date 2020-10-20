@@ -20,6 +20,21 @@ body
   font-size 16px
   color $textColor
 
+body .search-box
+  input
+    background-color transparent
+    color $textColor
+    border 1px solid $borderColor
+  @media (max-width: $MQNarrow)
+    input
+      border-color transparent
+    .suggestions
+      left 0
+      right 0
+      top 2.8rem
+      position fixed
+      margin-left auto
+      margin-right auto
 .page
   padding-left $sidebarWidth
 
@@ -52,6 +67,9 @@ body
   bottom 0
   box-sizing border-box
   overflow-y auto
+  a.sidebar-link
+    &:hover
+      text-decoration: none
 
 {$contentClass}:not(.custom)
   @extend $wrapper
@@ -216,6 +234,38 @@ th, td
   html,body,.theme-container{
   background-color: #35363a
   color: $dark[--textColor]
+  }
+  body .search-box{
+    input{
+      color: lighten($dark[--textColor], 25%)
+      border: 1px solid darken($dark[--borderColor], 10%)
+      &:focus{
+        border-color: $dark[--accentColor]
+      }
+    }
+    .suggestions{
+      background: #292a2d
+      border: 1px solid darken($dark[--borderColor], 10%)
+    }
+    .suggestion{
+      &:hover{
+        background-color: #414254
+      }
+      a{
+        color: lighten($dark[--textColor], 35%)
+      }
+      &.focused{
+        background-color: #414254
+        a{
+          color: $dark[--accentColor]
+        }
+      }
+    }
+    @media (max-width: $MQMobile){
+      input{
+        border-color transparent
+      }
+    }
   }
   a {
     color: $dark[--accentColor]

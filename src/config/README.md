@@ -4,23 +4,26 @@ sidebar: auto
 ---
 # 主题扩展配置
 ## 首页
-默认的主题首页（Homepage）新增备案信息，示例：
+主题首页（Homepage）配置，示例：
 
 ``` md
 ---
-/* ... */
-footer:
-- createYear: 创建年份（可选，author、authorLink、copyrightInfo 启动时必选）
-  author: 作者 （可选）
-  authorLink: 作者链接 （可选）
-  copyrightInfo: 版权信息 （可选）
-  licensedLink: 许可证链接 （可选）
-  licensed: 许可证名称 （可选）
-  beian: ICP备号 （可选）
-  beianLink: 备案链接（可选）
+
+home: true
+heroImage: /hero.png
+heroText: Hero 标题
+tagline: Hero 副标题
+actionText: 快速上手 →
+actionLink: /guide/
+actionIcon: fa fa-book  <!-- Font Awesome 图标(可选) -->
+features:
+- title: 标题
+  details: 描述
+  link: 链接 （可选）
+  imgUrl: 图片链接 （可选）
+
 ---
 ```
-footer启动后，`title`信息不可省略不写，你可以将`beian`、`beianlink`设置为 `null` 或者直接省略不写，来禁用备案信息。
 
 ## 导航栏
 ### 导航栏链接
@@ -42,9 +45,9 @@ module.exports = {
 // .vuepress/config.js
 module.exports = {
   themeConfig: {
-    //  填写 Git 服务商，默认 `GitHub`
-    repoPlatform: 'Github', // GitHub仓库可省略不写
-    // 填写 Git 仓库地址（可使用完整 URL）
+    //  填写 Git 服务商链接
+    repoPlatform: 'https://github.io',
+    // 填写 Git 仓库地址
     repo: '<USERNAME>/<REPO>', // or '<USERNAME>'
     // 自定义icon图标（可选）
     repoicon: 'fab fa-github',
@@ -64,6 +67,38 @@ module.exports = {
   }
 }
 ```
+
+## 页脚信息 (footer已移至config.js)
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    // 页脚信息 （createYear、author、authorLink、copyrightInfo 会全局显示，其他则主页显示）
+     footer:{
+      createYear: '2020', // 创建年份（可选，author、authorLink、copyrightInfo 启动时必选）
+      author: 'qcyblm', // 作者 （可选）
+      authorLink: 'https://github.com/qcyblm', // 作者链接 （可选）
+      copyrightInfo: 'All Rights Reserved.', //版权信息,支持html渲染解析标签 （可选）
+      licensed: 'MIT', // 许可证名称 （可选）
+      licensedLink: '/LICENSE.md', // 许可证链接 （可选）
+      beian: '', //ICP备号 （可选）
+      beianLink: 'http://xxxx', //备案链接（可选）
+    },
+    socialIcons:[ // 启动时，footer必选其中之一。
+    
+    /* 目前支持这些平台：Email、GitHub、GitLab、WeChat、QQ、Weibo、Music、Twitter、
+    Telegram、LinkedIn、YouTube、Facebook、Instagram、CodePen、Medium（可选） */
+    
+    // type: 社交平台；link：社交链接
+      { type: 'GitHub', link: 'https://github.com/qcyblm/' },  
+      { type: 'GitHub', link: 'https://github.com/qcyblm/' },
+      /* ... */ 
+    ]
+  },
+  }
+}
+```
+
 ## 多语言支持
 新增 `icon` 图标 
 

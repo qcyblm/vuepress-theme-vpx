@@ -105,9 +105,11 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   a, span, img
     display inline-block
-  .home-link
+  a
     &:hover
       text-decoration none
+  .home-link
+    &:hover
       .site-name
         color $accentColor
   .logo
@@ -133,11 +135,6 @@ $navbar-horizontal-padding = 1.5rem
     .search-box
       flex: 0 0 auto
       vertical-align top
-      .suggestion
-        &.focused
-          a
-            &:hover
-              text-decoration none
 
 @media (max-width: $MQMobile)
   .navbar
@@ -146,14 +143,6 @@ $navbar-horizontal-padding = 1.5rem
       display none
     .links
       padding-left 1.5rem
-      .search-box
-        .suggestions
-          left 0
-          right 0
-          top 2.8rem
-          position fixed
-          margin-left auto
-          margin-right auto
     .site-name
       width calc(75vw - 9.4rem)
       overflow hidden
@@ -176,43 +165,6 @@ $navbar-horizontal-padding = 1.5rem
     }
     .links{
       background-color: #35363a
-      .search-box{
-        input{
-          color: lighten($dark[--textColor], 25%)
-          background-color: #35363a
-          border: 1px solid darken($dark[--borderColor], 10%)
-          &:focus{
-            border-color: $dark[--accentColor]
-          }
-        }
-        .suggestions{
-          background: #292a2d
-          border: 1px solid darken($dark[--borderColor], 10%)
-        }
-        .suggestion{
-          &:hover{
-            background-color: #414254
-          }
-          a{
-            color: lighten($dark[--textColor], 35%)
-          }
-          &.focused{
-            background-color: #414254
-            a{
-              color: $dark[--accentColor]
-            }
-          }
-        }
-      }
-    }
-    @media (max-width: $MQMobile){
-      .links{
-        .search-box{
-          input{
-            border-color transparent
-          }
-        }
-      }
     }
   }
 }

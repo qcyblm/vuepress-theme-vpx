@@ -164,9 +164,9 @@ function renderCardList(tokens, idx, type) {
         let listDOM = ''
         if (type === CARD_LINK) { // 普通卡片列表1
           listDOM = getCardLinkDOM(dataList)
-        } else if(type === CARD_LINKS) { // 普通卡片列表2
+        } else if (type === CARD_LINKS) { // 普通卡片列表2
           listDOM = getCardLinksDOM(dataList, row)
-        } else if(type === CARD_LIST) { // 普通卡片列表3
+        } else if (type === CARD_LIST) { // 普通卡片列表3
           listDOM = getCardListDOM(dataList, row)
         } else if (type === CARD_IMG_LIST) { // 卡片图片列表
           listDOM = getCardImgListDOM(dataList, row)
@@ -184,13 +184,13 @@ function renderCardList(tokens, idx, type) {
 function getCardLinkDOM(dataList) {
   let listDOM = ''
   dataList.forEach(item => {
-    listDOM += `
-      <${item.link ? 'a href="' + item.link + '" title="' + item.link + '"' : 'span'} class="card-item"
-         style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}"
-      >
-        <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}</p>
-      </${item.link ? 'a' : 'span'}>
-   `
+    let title = item.desc ? item.desc : item.link
+    let bgColor = item.bgColor ? 'background-color:' + item.bgColor + ';' : ''
+    let nameColor = item.nameColor ? 'color:' + item.nameColor + ';' : ''
+    listDOM += [
+      `<a href="${item.link}" title="${title}" class="card-item" style="${bgColor}">`,
+      `<p class="name" style="${nameColor}">${item.name}</p>`,
+      `</a>\n`].join("")
   })
   return listDOM
 }
@@ -199,17 +199,18 @@ function getCardLinkDOM(dataList) {
 function getCardLinksDOM(dataList, row) {
   let listDOM = ''
   dataList.forEach(item => {
-    listDOM += `
-      <${item.link ? 'a href="' + item.link + '" title="' + item.link + '" target="_blank"' : 'span'} class="card-item ${row ? 'row-' + row : ''}"
-         style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}"
-      >
-        ${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}
-        <div>
-          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>
-          <p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>
-        </div>
-      </${item.link ? 'a' : 'span'}>
-    `
+    let bgColor = item.bgColor ? 'background-color:' + item.bgColor + ';' : ''
+    let nameColor = item.nameColor ? 'color:' + item.nameColor + ';' : ''
+    let textColor = item.textColor ? 'color:' + item.textColor + ';' : ''
+    listDOM += [
+      `<a href="${item.link}" title="${item.link}" class="card-item  ${row ? 'row-' + row : ''}" target="_blank" rel="noopener noreferrer" style="${bgColor}">`,
+      `${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}`,
+      `<div>
+        <p class="name" style="${nameColor}">${item.name}<OutboundLink /></p>
+        <p class="desc" style="${textColor}">${item.desc}</p>
+      </div>`,
+      `</a>\n`
+    ].join("")
   })
   return listDOM
 }
@@ -218,17 +219,18 @@ function getCardLinksDOM(dataList, row) {
 function getCardListDOM(dataList, row) {
   let listDOM = ''
   dataList.forEach(item => {
-    listDOM += `
-      <${item.link ? 'a href="' + item.link + '" title="' + item.link + '" target="_blank"' : 'span'} class="card-item ${row ? 'row-' + row : ''}"
-         style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}"
-      >
-        ${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}
-        <div>
-          <p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>
-          <p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>
-        </div>
-      </${item.link ? 'a' : 'span'}>
-    `
+    let bgColor = item.bgColor ? 'background-color:' + item.bgColor + ';' : ''
+    let nameColor = item.nameColor ? 'color:' + item.nameColor + ';' : ''
+    let textColor = item.textColor ? 'color:' + item.textColor + ';' : ''
+    listDOM += [
+      `<a href="${item.link}" title="${item.link}" class="card-item  ${row ? 'row-' + row : ''}" target="_blank" rel="noopener noreferrer" style="${bgColor}">`,
+      `${item.avatar ? '<img src="' + item.avatar + '" class="no-zoom">' : ''}`,
+      `<div>
+        <p class="name" style="${nameColor}">${item.name}<OutboundLink /></p>
+        <p class="desc" style="${textColor}">${item.desc}</p>
+      </div>`,
+      `</a>\n`
+    ].join("")
   })
   return listDOM
 }
@@ -237,6 +239,11 @@ function getCardListDOM(dataList, row) {
 function getCardImgListDOM(dataList, row) {
   let listDOM = ''
   dataList.forEach(item => {
+    let bgColor = item.bgColor ? 'background-color:' + item.bgColor + ';' : ''
+    let nameColor = item.nameColor ? 'color:' + item.nameColor + ';' : ''
+    let textColor = item.textColor ? 'color:' + item.textColor + ';' : ''
+    let authorColor = item.authorColor ? 'color:' + item.authorColor + ';' : ''
+    let authorbgColor = item.authorbgColor ? 'background-color:' + item.authorbgColor + ';' : ''
     listDOM += `
       <div class="card-item ${row ? 'row-' + row : ''}" >
         <div class="box-img">
@@ -246,22 +253,20 @@ function getCardImgListDOM(dataList, row) {
         </div>
 
         ${item.name || item.desc
-        ? `<div class="box-info"
-              style="${item.bgColor ? 'background-color:' + item.bgColor + ';' : ''}">
-              <a href="${item.link}" title="${item.link}" target="_blank">
-              ${item.name ? `<p class="name" style="${item.nameColor ? 'color:' + item.nameColor + ';' : ''}">${item.name}<OutboundLink /></p>` : ''}
-              ${item.desc ? `<p class="desc" style="${item.textColor ? 'color:' + item.textColor + ';' : ''}">${item.desc}</p>` : ''}
+        ? `<div class="box-info" style="${bgColor}">
+              <a href="${item.link}" title="${item.link}" target="_blank" rel="noopener noreferrer">
+                ${item.name ? `<p class="name" style="${nameColor}">${item.name}<OutboundLink /></p>` : ''}
+                ${item.desc ? `<p class="desc" style="${textColor}">${item.desc}</p>` : ''}
               </a>
-            </div>`
+             </div>`
         : ''
       }
         
         ${item.avatar || item.author
-        ? `<div class="box-footer"
-             style="${item.authorbgColor ? 'background-color:' + item.authorbgColor + ';' : ''}">
-              <a href="${item.authorLink || item.link}" title="${item.authorLink || item.link}" target="_blank">
+        ? `<div class="box-footer" style="${authorbgColor}">
+              <a href="${item.authorLink || item.link}" title="${item.authorLink || item.link}" target="_blank" rel="noopener noreferrer">
                 ${item.avatar ? `<img src="${item.avatar}" class="no-zoom">` : ''}
-                ${item.author ? `<span style="${item.authorColor ? 'color:' + item.authorColor + ';' : ''}">${item.author}<OutboundLink /></span>` : ''}
+                ${item.author ? `<span style="${authorColor}">${item.author}</span><OutboundLink style="margin-left: 0"/>` : ''}
               </a>
             </div>`
         : ''
