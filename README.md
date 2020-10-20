@@ -27,8 +27,9 @@ VPX是VuePress的一个主题，默认主题基础上做了些扩展功能;
 使用本主题请先学习 [VuePress 默认主题](https://www.vuepress.cn/theme/default-theme-config.html) 配置，然后再使用本主题。
 
 ## 文档
-查看我们的文档 [https://qcyblm.github.io/vuepress-theme-vpx/](https://qcyblm.github.io/vuepress-theme-vpx/)
-
+查看我们的文档 
+GitHub ：[https://qcyblm.github.io/vuepress-theme-vpx/](https://qcyblm.github.io/vuepress-theme-vpx/)
+gitee ：[https://qcyblm.gitee.io/vuepress-theme-vpx/](https://qcyblm.gitee.io/vuepress-theme-vpx/)
 ## 安装主题
 ``` sh
 yarn add @qcyblm/vuepress-theme-vpx -D
