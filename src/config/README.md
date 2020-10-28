@@ -53,6 +53,7 @@ module.exports = {
       // `GitHub`/`GitLab`/`Bitbucket`/`Gitee` 其中之一，或是 `Source`。
       label: '查看源码',
     },
+    editLinks: true,
     edit: {
       text: '帮助我们改善此页面！',  // 默认为 "编辑此页面"
       docsRepo: '<REPO>',  // 填写 Git 文档仓库地址
