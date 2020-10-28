@@ -28,8 +28,8 @@
       rel="noopener noreferrer"
     >
     <i
-      v-if="repoicon"
-      :class="`${ repoicon }`"
+      v-if="repo.icon !== false"
+      :class="`${ repo.icon  || 'fab fa-git'}`"
     >
     </i>
       <span>{{repoLabel}}</span>
@@ -97,30 +97,25 @@ export default {
       })
     },
 
+    repo() {
+      return this.$site.themeConfig.repo
+    },
     repoLink () {
       const { repo } = this.$site.themeConfig
-      const { repoPlatform } = this.$site.themeConfig
       if (repo) {
-        return /^http[s]?:\/\/[^/:\^A-Z]+\.[^A-Z]+\//.test(repo)
+        return /^http[s]?:/.test(repo.owner)
           ? repo
-          : `${ repoPlatform }/${ repo }`
+          : `${ repo.platform }${ repo.owner }/${ repo.repositories }`
       }
       return null
     },
-
-    repoicon () {
-      if (this.$site.themeConfig.repoicon) {
-        return this.$site.themeConfig.repoicon
-      }
-    },
-
     repoLabel () {
       if (!this.repoLink) return
-      if (this.$site.themeConfig.repoLabel) {
-        return this.$site.themeConfig.repoLabel
+      if (this.repo.Label) {
+        return this.repo.Label
       }
 
-      const repoHost = this.repoLink.match(/^http[s]?:\/\/[^/:\^A-Z]+\.[^A-Z]+\//)[0]
+      const repoHost = this.repoLink.match(/^http[s]?:\/\/[^/]+/)[0]
       const platforms = ['GitHub', 'GitLab', 'Bitbucket','Gitee']
       for (let i = 0; i < platforms.length; i++) {
         const platform = platforms[i]
