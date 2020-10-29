@@ -46,8 +46,8 @@ export default {
     editLink () {
       const edit = this.$site.themeConfig.edit
       const showEditLink = isNil(this.$page.frontmatter.editLink)
-        ? this.$site.themeConfig.edit
-        : this.$edit.Link
+        ? this.$site.themeConfig.editLinks
+        : this.$page.frontmatter.editLink
 
       const {
         repo,

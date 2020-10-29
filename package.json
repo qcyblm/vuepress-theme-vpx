@@ -1,0 +1,37 @@
+{
+  "name": "@qcyblm/vuepress-theme-vpx",
+  "version": "1.0.0-alpha.12",
+  "description": "VPX theme for VuePress",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qcyblm/vuepress-theme-vpx.git"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src"
+  },
+  "keywords": [
+    "vpx",
+    "vue",
+    "theme",
+    "vuepress"
+  ],
+  "author": "qcyblm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qcyblm/vuepress-theme-vpx/issues"
+  },
+  "homepage": "https://github.com/qcyblm/vuepress-theme-vpx#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@qcyblm/vuepress-theme-vpx": "^1.0.0-alpha.12",
+    "moment": "^2.29.0",
+    "vuepress": "^1.7.1"
+  },
+  "dependencies": {
+    "vuepress-plugin-code-copy": "^1.0.6"
+  }
+}

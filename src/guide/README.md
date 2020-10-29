@@ -21,18 +21,65 @@ VPX 是 VuePress 的一个主题，默认主题基础上做了些扩展功能；
 mkdir vuepress-starter && cd vuepress-starter
 ```
 2. 使用你喜欢的包管理器进行初始化
-``` sh
-yarn init # npm init
+
+<code-group>
+<code-block title="yarn" active>
+```bash
+yarn init 
 ```
+</code-block>
+
+<code-block title="npm">
+```bash
+npm init
+```
+</code-block>
+</code-group>
+
 3. 将 VuePress 安装为本地依赖，我们已经不再推荐全局安装 VuePress
-``` sh
-yarn add -D vuepress # npm install -D vuepress
+
+<code-group>
+<code-block title="yarn" active>
+```bash
+yarn add -D vuepress
 ```
+</code-block>
+
+<code-block title="npm">
+```bash
+npm install -D vuepress
+```
+</code-block>
+
+<code-block title="cnpm">
+```bash
+cnpm install -D vuepress
+```
+</code-block>
+</code-group>
+
 4. 将 VPX 主题安装为本地依赖
-``` sh
-yarn add @qcyblm/vuepress-theme-vpx -D
-# or npm i @qcyblm/vuepress-theme-vpx -D
+
+<code-group>
+<code-block title="yarn" active>
+```bash
+yarn add -D @qcyblm/vuepress-theme-vpx
 ```
+</code-block>
+
+<code-block title="npm">
+```bash
+npm install -D @qcyblm/vuepress-theme-vpx
+```
+</code-block>
+
+<code-block title="cnpm">
+```bash
+cnpm install -D @qcyblm/vuepress-theme-vpx
+```
+</code-block>
+</code-group>
+
 5. 创建你的第一篇文档
 ``` sh
 mkdir docs && echo '# Hello VuePress' > docs/README.md
@@ -61,9 +108,21 @@ module.exports = {
 }
 ```
 8. 在本地启动服务器
-``` sh
-yarn dev # npm run dev
+
+<code-group>
+<code-block title="yarn" active>
+```bash
+yarn dev
 ```
+</code-block>
+
+<code-block title="npm">
+```bash
+npm run dev
+```
+</code-block>
+</code-group>
+
 VuePress 会在 [http://localhost:8080](http://localhost:8080) 启动一个热重载的开发服务器。
 
 现在，你应该已经有了一个简单可用的 VuePress 文档。接下来，了解一下推荐的 VuePress 中的[目录结构](https://v1.vuepress.vuejs.org/zh/guide/directory-structure.html)、[基本配置](https://v1.vuepress.vuejs.org/zh/config/)和 [VPX 扩展配置](../config/)。

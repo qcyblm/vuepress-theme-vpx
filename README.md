@@ -5,13 +5,13 @@
 </p>
 
 ![npm](https://img.shields.io/npm/l/@qcyblm/vuepress-theme-vpx)
-![npm (scoped)](https://img.shields.io/npm/v/@qcyblm/vuepress-theme-vpx)
+[![npm (scoped)](https://img.shields.io/npm/v/@qcyblm/vuepress-theme-vpx)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx?activeTab=versions)
 ![npm](https://img.shields.io/npm/dt/@qcyblm/vuepress-theme-vpx)
 
 ![GitHub stars](https://img.shields.io/github/stars/qcyblm/vuepress-theme-vpx)
 ![GitHub forks](https://img.shields.io/github/forks/qcyblm/vuepress-theme-vpx)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx?include_prereleases)
-![GitHub issues](https://img.shields.io/github/issues/qcyblm/vuepress-theme-vpx)
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx?include_prereleases)](https://github.com/qcyblm/vuepress-theme-vpx/releases)
+[![GitHub issues](https://img.shields.io/github/issues/qcyblm/vuepress-theme-vpx)](https://github.com/qcyblm/vuepress-theme-vpx/issues)
 
 ![Author](https://img.shields.io/badge/Author-qcyblm-red)
 ![Theme](https://img.shields.io/badge/Theme-@qcyblm/vuepress-%2dtheme-%2dvpx-red)

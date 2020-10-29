@@ -40,10 +40,18 @@ module.exports = {
 ```
 ## Git 仓库和编辑链接
 
+当你提供了 `themeConfig.repo` 选项，将会自动在每个页面的导航栏生成生成一个 GitHub 链接，以及在页面的底部生成一个 `“编辑此页面”` 链接。
+
 ``` js
 // .vuepress/config.js
 module.exports = {
   themeConfig: {
+    locales: {
+      '/': {
+        // 编辑链接文字
+        editLinkText: '在 GitHub 上编辑此页',
+      }
+    },
     repo: {
       platform: 'https://github.com/',  // 填写 Git 服务商链接
       icon: 'fab fa-github',  // 自定义 icon 图标 (默认 'fab fa-git', 禁用填写 false)
@@ -53,7 +61,7 @@ module.exports = {
       // `GitHub`/`GitLab`/`Bitbucket`/`Gitee` 其中之一，或是 `Source`。
       label: '查看源码',
     },
-    editLinks: true,
+    editLinks: true,  // 默认是 false, 设置为 true 来启用
     edit: {
       text: '帮助我们改善此页面！',  // 默认为 "编辑此页面"
       docsRepo: '<REPO>',  // 填写 Git 文档仓库地址
@@ -62,6 +70,14 @@ module.exports = {
     },
   }
 }
+```
+
+你可以通过 `YAML front matter` 来禁用指定页面的编辑链接：
+
+``` yaml
+---
+editLink: false
+---
 ```
 ## 返回顶部按钮
 使用的是 [@vuepress/plugin-back-to-top](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-back-to-top) 第三方组件，已内置主题，修改图标为 `fa fa-arrow-up`

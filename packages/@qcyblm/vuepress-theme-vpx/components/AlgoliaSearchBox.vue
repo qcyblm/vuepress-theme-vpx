@@ -171,11 +171,12 @@ export default {
 [data-theme = dark ] & {
   .algolia-search-wrapper{
     .algolia-autocomplete{
-      .ds-dropdown-menu
+      .ds-dropdown-menu{
         background-color: #35363a
         .ds-suggestion{
           border-bottom: 1px solid $dark[--borderColor]
         }
+      }
       .algolia-docsearch-suggestion{
         border-color: $dark[--borderColor]
         .algolia-docsearch-suggestion--category-header{

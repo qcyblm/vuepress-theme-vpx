@@ -1,5 +1,6 @@
 <template>
   <aside class="sidebar">
+    <Ads v-if="$themeConfig.ads" />
     <NavLinks />
 
     <slot name="top" />
@@ -13,13 +14,14 @@
 </template>
 
 <script>
+import Ads from '@theme/components/ui/Ads.vue'
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks },
+  components: { Ads, SidebarLinks, NavLinks },
 
   props: ['items']
 }

@@ -7,7 +7,3 @@ node_modules/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .temp
-
-# Configuration information
-.vuepress
-src/package.json

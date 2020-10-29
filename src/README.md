@@ -8,10 +8,27 @@ actionLink: /guide/
 actionIcon: fa fa-book
 ---
 ### 安装主题
-``` sh
-yarn add @qcyblm/vuepress-theme-vpx -D
-# or npm i @qcyblm/vuepress-theme-vpx -D
+
+<code-group>
+<code-block title="yarn" active>
+```bash
+yarn add -D @qcyblm/vuepress-theme-vpx
 ```
+</code-block>
+
+<code-block title="npm">
+```bash
+npm install -D @qcyblm/vuepress-theme-vpx
+```
+</code-block>
+
+<code-block title="cnpm">
+```bash
+cnpm install -D @qcyblm/vuepress-theme-vpx
+```
+</code-block>
+</code-group>
+
 ### 引用主题
 ``` js
 // .vuepress/config.js
@@ -27,14 +44,6 @@ module.exports = {
 :::
 ## 贡献者
 
-[<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing "Evan Xu")[<img src="https://avatars.githubusercontent.com/chioio" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/chioio "Tenn Chio")
+[<img src="https://avatars.githubusercontent.com/xugaoyi" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/xugaoyi/vuepress-theme-vdoing "Evan Xu")[<img src="https://avatars.githubusercontent.com/chioio" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/chioio "Tenn Chio")[<img src="https://avatars.githubusercontent.com/zpfz" width="32px" height="32px" alt="Evan Xu" style="border-radius: 32px;margin-left: 10px;">](https://github.com/zpfz/vuepress-theme-antdocs "Feng L.H.")
 
 [我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
-
-## 交流群
-::: center
-<img :src="$withBase('/assets/img/qrcode_1600243151596.jpg')" alt="群号: 984339883"  width="243px">
-
-### VPX 官方交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=Y2yALNrc-xC9Wj9wsLRp7fPSFhqsO9GH&jump_from=webapi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="vuepress-theme-vpx 交流群" title="vuepress-theme-vpx 交流群"></a><br><br>
-:::
-

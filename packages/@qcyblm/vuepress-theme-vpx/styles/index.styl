@@ -19,6 +19,9 @@ body
   -moz-osx-font-smoothing grayscale
   font-size 16px
   color $textColor
+  button
+    border none
+    outline none
 
 body .search-box
   input
@@ -283,5 +286,8 @@ th, td
     &:hover .header-anchor{
       color: $dark[--accentColor]
     }
+  }
+  div > .theme-code-group__nav{
+    background-color: $dark[--codeBgColor]
   }
 }
