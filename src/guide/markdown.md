@@ -425,3 +425,5 @@ console.log('这是一个详情块')
   - `textColor` 描述色 (可选)，默认 $cardTextColor。颜色值有 `#` 号时请添加单引号
   - `authorbgColor` 作者背景色 (可选)，默认 $cardImgFooterBgColor。颜色值有 `#` 号时请添加单引号
   - `authorColor` 作者名称的字体颜色 (可选)，默认 $cardImgFooterAuthor。颜色值有 `#` 号时请添加单引号
+
+文章出处：文档部分内容摘自 [vdoing](https://xugaoyi.github.io/vuepress-theme-vdoing-doc/pages/d0d7eb/)

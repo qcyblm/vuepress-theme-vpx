@@ -40,3 +40,5 @@ module.exports = {
 
 此外，你可以在 `.vuepress/styles/palette.styl` 下添加样式变量 `$adsWidth` 来设置图片的宽度。  
 为了给用户保留较好的浏览效果，广告位在移动端默认不显示。如果你非要在移动端显示侧边栏广告的话，可以在 `.vuepress/styles/palette.styl` 下添加 `$MobileShow = block` 即可。
+
+文章出处：文档部分内容摘自 [AntDocs](https://antdocs.seeyoz.cn/guide/extend-config.html)
