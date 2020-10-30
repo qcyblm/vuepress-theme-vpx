@@ -9,25 +9,10 @@ actionIcon: fa fa-book
 ---
 ### 安装主题
 
-<code-group>
-<code-block title="yarn" active>
-```bash
-yarn add -D @qcyblm/vuepress-theme-vpx
+``` sh
+yarn add @qcyblm/vuepress-theme-vpx -D
+# or npm i @qcyblm/vuepress-theme-vpx -D
 ```
-</code-block>
-
-<code-block title="npm">
-```bash
-npm install -D @qcyblm/vuepress-theme-vpx
-```
-</code-block>
-
-<code-block title="cnpm">
-```bash
-cnpm install -D @qcyblm/vuepress-theme-vpx
-```
-</code-block>
-</code-group>
 
 ### 引用主题
 ``` js
