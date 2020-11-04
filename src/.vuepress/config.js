@@ -34,8 +34,8 @@ module.exports = {
     editLinks: true,
     editLinkText: '编辑当前页',
     edit: {
-      docsPlatform: 'https://gitee.com/',
-      docsRepo: 'qcy/vuepress-theme-vpx',
+      docsPlatform: 'https://github.com/',
+      docsRepo: 'qcyblm/vuepress-theme-vpx',
       docsBranch: 'master',
       docsDir: 'src',
     },
