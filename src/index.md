@@ -5,7 +5,7 @@ heroText: '@qcyblm/vuepress-theme-vpx'
 tagline: '一款基于 VuePress 开发的主题'
 action:
 - text: 快速上手 →
-  link: /guide/
+  link: /vuepress-theme-vpx/guide/
   icon: fa fa-book
 footerWrap:
 - title: 生态系统
