@@ -1,10 +1,10 @@
 <template>
-  <nav
+  <ul
     v-if="userLinks.length || repoLink"
     class="nav-links"
   >
     <!-- user links -->
-    <div
+    <li
       v-for="item in userLinks"
       :key="item.link"
       class="nav-item"
@@ -17,25 +17,21 @@
         v-else
         :item="item"
       />
-    </div>
+    </li>
 
     <!-- repo link -->
-    <a
-      v-if="repoLink"
-      :href="repoLink"
-      class="repo-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-    <i
-      v-if="repo.icon !== false"
-      :class="`${ repo.icon  || 'fab fa-git'}`"
-    >
-    </i>
-      <span>{{repoLabel}}</span>
-      <OutboundLink />
-    </a>
-  </nav>
+    <li v-if="repoLink" class="nav-item">
+      <a
+        :href="repoLink"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i v-if="repo.icon" :class="repo.icon" />
+        <span>{{repoLabel}}</span>
+        <OutboundLink />
+      </a>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -147,6 +143,7 @@ export default {
     display inline-block
     margin-left 1.5rem
     line-height 2rem
+    padding 0
     a 
       &:hover
         color $accentColor
@@ -154,16 +151,10 @@ export default {
       margin-left 0
     .fab,.fa
       color $naviconColor
-  .repo-link
-    margin-left 1.5rem
-    .fab,.fa
-      color $naviconColor
-    &:hover
-      color $accentColor
 
 @media (max-width: $MQMobile)
   .nav-links
-    .nav-item, .repo-link
+    .nav-item
       margin-left 0
 
 @media (min-width: $MQMobile)
@@ -171,59 +162,36 @@ export default {
     &:hover, &.router-link-active
       color $textColor
   .nav-item > a:not(.external)
+    &.router-link-active
+      border-bottom 2px solid lighten($accentColor, 8%)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
 
-[data-theme = dark ] & {
-  .nav-links{
-    a{
-      color: inherit
-      &:hover{
+[data-theme = dark ] &
+  .nav-links
+    a
+      color inherit
+      &:hover
         color: $dark[--accentColor]
-        span{
+        span
           color: $dark[--accentColor]
-        }
-      }
-      &.router-link-active{
+      &.router-link-active
         color: $dark[--accentColor]
-        .fa,.fab,span{
+        .fa,.fab,span
           color: $dark[--accentColor]
-        }
-      }
-    }
-    .nav-item{
-      a{
-        &:hover{
+    .nav-item
+      a
+        &:hover
           color: $dark[--accentColor]
-        }
-      }
-      .fab,.fa{
+      .fab,.fa
         color: $dark[--naviconColor]
-      }
-    }
-    .repo-link{
-      .fab,.fa{
-        color: $dark[--naviconColor]
-      }
-      &:hover{
-        color: $dark[--accentColor]
-      }
-    }
-  }
-  @media (min-width: $MQMobile){
-    .nav-links{
-      a{
-        &:hover, &.router-link-active{
+  @media (min-width: $MQMobile)
+    .nav-links
+      a
+        &:hover, &.router-link-active
           color: $dark[--textColor]
-        }
-      }
-    }
-    .nav-item > a:not(.external){
-      &:hover, &.router-link-active{
+    .nav-item > a:not(.external)
+      &.router-link-active
         border-bottom: 2px solid lighten($dark[--accentColor], 8%)
-      }
-    }
-  }
-}
+
 </style>

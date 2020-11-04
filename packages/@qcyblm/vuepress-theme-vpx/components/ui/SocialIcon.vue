@@ -1,8 +1,10 @@
 <template>
-  <a class="social-icon" :href="link" :title="type" :class="extraClass" target="_blank" rel="noopener noreferrer">
-    <i :class="iconClass" />
-    <span class="sr-only">{{ type }}</span>
-  </a>
+  <li>
+    <a class="social-icon" :href="link" :title="type" :class="extraClass" target="_blank" rel="noopener noreferrer">
+      <i :class="iconClass" class="fa-lg" />
+      <span class="sr-only">{{ type }}</span>
+    </a>
+  </li>
 </template>
 
 <script>
@@ -47,45 +49,31 @@ export default {
 </script>
 
 <style lang="stylus">
-.fa, .fab {
-  &-weixin {
-    color: #1aad19;
-  }
-
-  &-weibo {
-    color: #e6162d;
-  }
-
-  &-telegram {
-    color: #28a0d4;
-  }
-
-  &-github, &-gitlab, &-music, &-codepen, &-envelope {
-    color: #000;
-  }
-
-  &-twitter, &-twitter-square {
-    color: #1da1f3;
-  }
-
-  &-linkedin, &-linkedin-square {
-    color: #0077b5;
-  }
-
-  &-facebook, &-facebook-square {
-    color: #3b5998;
-  }
-
-  &-youtube, &-youtube-play, &-youtube-square {
-    color: #f00;
-  }
-
-  &-instagram {
-    color: #c13584;
-  }
-
-  &-medium {
-    color: #000;
-  }
-}
+ul
+  padding 0
+  margin 0 1rem
+  list-style none
+li
+  padding 0 5px
+.fa, .fab
+  &-weixin
+    color #1aad19
+  &-weibo
+    color #e6162d
+  &-telegram 
+    color #28a0d4
+  &-github, &-gitlab, &-music, &-codepen, &-envelope 
+    color #000
+  &-twitter, &-twitter-square 
+    color #1da1f3
+  &-linkedin, &-linkedin-square 
+    color #0077b5
+  &-facebook, &-facebook-square 
+    color #3b5998
+  &-youtube, &-youtube-play, &-youtube-square 
+    color #f00
+  &-instagram 
+    color #c13584
+  &-medium 
+    color #000
 </style>

@@ -1,6 +1,6 @@
 {
   "name": "@qcyblm/vuepress-theme-vpx",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0",
   "description": "VPX theme for VuePress",
   "main": "index.js",
   "repository": {
@@ -27,7 +27,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@qcyblm/vuepress-theme-vpx": "^1.0.0-alpha.12",
+    "@qcyblm/vuepress-theme-vpx": "^1.0.1",
     "moment": "^2.29.0",
     "vuepress": "^1.7.1"
   },

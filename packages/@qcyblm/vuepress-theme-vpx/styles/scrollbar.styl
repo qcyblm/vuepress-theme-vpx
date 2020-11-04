@@ -33,11 +33,10 @@
     -webkit-box-shadow inset 0 0 6px rgba(0, 0, 0, 0.3)
 
 // 暗黑模式
-[data-theme = dark ] & {
-  ::-webkit-scrollbar-track-piece{
+[data-theme = dark ] &
+  ::-webkit-scrollbar-track-piece
     background-color: $dark[--scrollbarBgColor]
-  }
-  ::-webkit-scrollbar-thumb:vertical{
+  ::-webkit-scrollbar-thumb:vertical
     background-image: -webkit-gradient(
       linear,
       left bottom,
@@ -45,8 +44,7 @@
       color-stop(.44,$dark[--scrollbarBottomColor]),
       color-stop(.72,$dark[--scrollbarTopColor])
     )
-  }
-  ::-webkit-scrollbar-thumb:horizontal{
+  ::-webkit-scrollbar-thumb:horizontal
     background-image: -webkit-gradient(
       linear,
       left bottom,
@@ -54,5 +52,3 @@
       color-stop(.44,$dark[--scrollbarBottomColor]),
       color-stop(.72,$dark[--scrollbarTopColor])
     )
-  }
-}

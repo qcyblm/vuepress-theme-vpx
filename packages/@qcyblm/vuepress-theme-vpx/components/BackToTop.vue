@@ -75,12 +75,9 @@ export default {
   .go-to-top
     bottom: 1rem;
     right: 1rem;
-[data-theme = dark ] & {
-  .go-to-top {
-  color: $dark[--accentColor]
-  }
-  .go-to-top:hover {
-  color: lighten($dark[--accentColor], 30%)
-  }
-}
+[data-theme = dark ] &
+  .go-to-top
+    color: $dark[--accentColor]
+  .go-to-top:hover
+    color: lighten($dark[--accentColor], 30%)
 </style>

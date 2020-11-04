@@ -1,9 +1,7 @@
 <template>
-  <div class="ads">
-    <a :href="ads.link" target="_blank" :title="ads.desc" rel="noopener sponsored">
-      <img :src="ads.img" :alt="ads.text" border="0">
-    </a>
-  </div>
+  <a  class="ads" :href="ads.link" target="_blank" :title="ads.desc" rel="noopener sponsored">
+    <img :src="ads.img" :alt="ads.text" border="0">
+  </a>
 </template>
 
 <script>
@@ -34,9 +32,7 @@ export default {
     img
       width $adsWidth
       height auto
-[data-theme = dark ] & {
-  .sidebar > .ads{
+[data-theme = dark ] &
+  .sidebar > .ads
     border-bottom-color: $dark[--borderColor]
-  }
-}
 </style>

@@ -12,7 +12,6 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  temp: '.temp',
   dest: 'docs',
   theme: '@qcyblm/vpx',
   themeConfig: {
@@ -33,25 +32,27 @@ module.exports = {
       repositories: 'vuepress-theme-vpx',
     },
     editLinks: true,
+    editLinkText: '编辑当前页',
     edit: {
-      text: '编辑当前页',
-      docsRepo: 'vuepress-theme-vpx',
+      docsPlatform: 'https://gitee.com/',
+      docsRepo: 'qcy/vuepress-theme-vpx',
       docsBranch: 'master',
       docsDir: 'src',
     },
     lastUpdated: '最后更新时间',
     footer:{
+      licensedLink: 'https://github.com/qcyblm/vuepress-theme-vpx/blob/master/LICENSE',
+      licensed: 'MIT',
       createYear: '2020',
       author: 'qcyblm',
       authorLink: 'https://github.com/qcyblm',
-      copyrightInfo: '<br>Powered by <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer" >VuePress</a>',
-      licensedLink: 'https://github.com/qcyblm/vuepress-theme-vpx/blob/master/LICENSE.md',
-      licensed: 'MIT',
-    },
-    socialIcons:[
-      { type: 'QQ', link: 'https://qm.qq.com/cgi-bin/qm/qr?k=Y2yALNrc-xC9Wj9wsLRp7fPSFhqsO9GH&jump_from=webapi' },
-      { type: 'GitHub', link: 'https://github.com/qcyblm/' }
-    ]
+      copyright: [
+        {
+          text: '个人主页',
+          link: 'https://qcyblm.github.io/'
+        }
+      ]
+    }
   },
   plugins: [
     [

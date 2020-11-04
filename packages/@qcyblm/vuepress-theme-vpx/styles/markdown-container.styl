@@ -352,33 +352,23 @@ h1, h2, h3, h4, h5, h6
         width calc(100% - 1rem)
 
 // 暗黑模式
-[data-theme = dark ] & {
-  .card-list{
-    .card-item{
+[data-theme = dark ] & 
+  .card-list
+    .card-item
       background-color: $dark[--cardBgColor]
       color: $dark[--cardTextColor]
-      p.name{
+      p.name
         color: $dark[--cardTitleColor]
-      }
-      p.desc,a{
+      p.desc,a
         color: $dark[--cardTextColor]
-      }
-      .box-info{
-        .name{
+      .box-info
+        .name
           color: $dark[--cardTitleColor]
-        }
-        p.desc{
+        p.desc
           color: $dark[--cardTextColor]
-        }
         background-color: $dark[--cardBgColor]
-      }
-      .box-footer{
+      .box-footer
         border-top-color: $dark[--borderColor]
         background-color: $dark[--cardImgFooterBgColor]
-        span{
+        span
           color: $dark[--cardImgFooterAuthorColor]
-        }
-      }
-    }
-  }
-}

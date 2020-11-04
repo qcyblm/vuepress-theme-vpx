@@ -42,18 +42,13 @@ export default {
   & + &
     margin-left 5px
 
-[data-theme = dark ] & {
-  .badge{
-    color: #35363a
-    &.tip, &.green{
+[data-theme = dark ] &
+  .badge
+    color #35363a
+    &.tip, &.green
       background-color: $dark[--badgeTipColor]
-    }
-    &.error{
+    &.error
       background-color: $dark[--badgeErrorColor]
-    }
-    &.warning, &.warn, &.yellow{
+    &.warning, &.warn, &.yellow
       background-color: $dark[--badgeWarningColor]
-    }
-  }
-}
 </style>

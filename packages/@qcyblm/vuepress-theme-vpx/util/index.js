@@ -157,6 +157,7 @@ function resolveHeaders (page) {
     type: 'group',
     collapsable: false,
     title: page.title,
+    icon: page.icon,
     path: null,
     children: headers.map(h => ({
       type: 'auto',
@@ -235,6 +236,7 @@ function resolveItem (item, pages, base, groupDepth = 1) {
       type: 'group',
       path: item.path,
       title: item.title,
+      icon: item.icon,
       sidebarDepth: item.sidebarDepth,
       initialOpenGroupIndex: item.initialOpenGroupIndex,
       children: children.map(child => resolveItem(child, pages, base, groupDepth + 1)),

@@ -43,7 +43,7 @@ export default {
     padding 0.5rem 0 0.75rem 0
     a
       font-weight 600
-    .nav-item, .repo-link
+    .nav-item
       display block
       line-height 1.25rem
       font-size 1.1em
@@ -66,13 +66,10 @@ export default {
     & > .sidebar-links
       padding 1rem 0
 
-[data-theme = dark ] & {
-  .sidebar{
+[data-theme = dark ] &
+  .sidebar
     background-color: #35363a
     border-right: 1px solid $dark[--borderColor]
-    .nav-links{
+    .nav-links
       border-bottom: 1px solid $dark[--borderColor]
-    }
-  }
-}
 </style>

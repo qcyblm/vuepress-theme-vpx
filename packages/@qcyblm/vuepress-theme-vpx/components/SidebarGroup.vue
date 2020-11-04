@@ -19,6 +19,8 @@
       :to="item.path"
       @click.native="$emit('toggle')"
     >
+      <i v-if="item.icon" :class="item.icon" />
+      <i v-else :class="$page.frontmatter.icon" />
       <span>{{ item.title }}</span>
       <span
         v-if="collapsable"
@@ -33,6 +35,8 @@
       :class="{ open }"
       @click="$emit('toggle')"
     >
+      <i v-if="item.icon" :class="item.icon" />
+      <i v-else :class="$page.frontmatter.icon" />
       <span>{{ item.title }}</span>
       <span
         v-if="collapsable"
@@ -139,18 +143,13 @@ export default {
   font-size 0.95em
   overflow hidden
 
-[data-theme = dark ] & {
-  .sidebar-heading{
+[data-theme = dark ] &
+  .sidebar-heading
     color: $dark[--textColor]
-    &.clickable{
-      &.active{
+    &.clickable
+      &.active
         color: $dark[--accentColor]
         border-left-color: $dark[--accentColor]
-      }
-      &:hover{
+      &:hover
         color: $dark[--accentColor]
-      }
-    }
-  }
-}
 </style>

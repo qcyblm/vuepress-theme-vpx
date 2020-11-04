@@ -6,11 +6,7 @@
     :exact="exact"
     @focusout.native="focusoutAction"
   >
-    <i 
-      v-if="item.icon"
-      :class="`${item.icon}`"
-    >
-    </i>
+    <i v-if="item.icon" :class="item.icon" />
     <span>{{ item.text }}</span>
   </RouterLink>
   <a
@@ -21,11 +17,7 @@
     :rel="rel"
     @focusout="focusoutAction"
   >
-    <i 
-      v-if="item.icon"
-      :class="`${item.icon}`"
-    >
-    </i>
+    <i v-if="item.icon" :class="item.icon" />
     <span>{{ item.text }}</span>
     <OutboundLink v-if="isBlankTarget" />
   </a>

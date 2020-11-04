@@ -9,41 +9,12 @@
     border-left-width .5rem
     border-left-style solid
     margin 1rem 0
-  &::before {
-    position absolute
-    top 19px
-    left -14px
-    color #fff
-    width 20px
-    height 20px
-    border-radius: 100%
-    text-align center
-    line-height 20px
-    font-weight bold
-    font-family 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
-    font-size 14px
-  }
-  &.info {
+  &.info
     border-color $badgeInfoColor
     background-color #f8f8f8
-    &::before {
-      content url('https://v3.vuejs.org/images/icons/info.svg')
-      width 25px
-      height 25px
-      left -16px
-      box-sizing border-box
-    }
-  }
-  &.tip {
+  &.tip
     border-color $badgeTipColor
     background-color #f8f8f8
-    &::before {
-      content url('https://v3.vuejs.org/images/icons/bulb.svg')
-      width 25px
-      height 25px
-      left -16px
-    }
-  }
   &.warning
     border-color $badgeWarningColor
     background-color #f8f8f8
@@ -52,13 +23,6 @@
       color #222
     a
       color $textColor
-    &::before {
-      content url('https://v3.vuejs.org/images/icons/danger.svg')
-      width 25px
-      height 25px
-      left -16px
-      box-sizing border-box
-    }
   &.danger
     border-color $badgeErrorColor
     background-color #f8f8f8
@@ -67,12 +31,6 @@
       color #222
     a
       color $textColor
-    &::before {
-      content url('https://v3.vuejs.org/images/icons/stop.svg')
-      width 25px
-      height 25px
-      left -16px
-    }
   &.details
     display block
     position relative
@@ -101,50 +59,35 @@
     font-size 0.9rem
     text-align right
 
-[data-theme = dark ] & {
-  .custom-block{
-    &.info{
+[data-theme = dark ] & 
+  .custom-block
+    &.info
       border-color: $dark[--badgeInfoColor]
-      background-color: rgba(243,245,247,.2)
-    }
-    &.tip{
+      background-color rgba(243,245,247,.2)
+    &.tip
       border-color: $dark[--badgeTipColor]
-      background-color: rgba(243,245,247,.2)
-    }
-    &.warning{
+      background-color rgba(243,245,247,.2)
+    &.warning
       border-color: $dark[--badgeWarningColor]
-      background-color: rgba(243,245,247,.2)
-      a{
+      background-color rgba(243,245,247,.2)
+      a
         color: $dark[--textColor]
-      }
-      .custom-block-title{
+      .custom-block-title
         color #c5c5c5
-      }
-      p{
-        color: #e7c000
-      }
-    }
-    &.danger{
+      p
+        color #e7c000
+    &.danger
       border-color: $dark[--badgeErrorColor]
-      background-color: rgba(243,245,247,.2)
-      a{
+      background-color rgba(243,245,247,.2)
+      a
         color: $dark[--textColor]
-      }
-      .custom-block-title{
+      .custom-block-title
         color #c5c5c5
-      }
-      p{
+      p
         color #cf6679
-      }
-    }
-    &.details{
-      background-color: #202124
-    }
-    &.theorem{
-      background-color: #27272b
-    }
-    &.right{
+    &.details
+      background-color #202124
+    &.theorem
+      background-color #27272b
+    &.right
       color: transparentify($dark[--textColor], 0.8)
-    }
-  }
-}

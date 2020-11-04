@@ -1,6 +1,6 @@
 <template>
   <div class="page-edit">
-    <div
+    <span
       v-if="editLink"
       class="edit-link"
     >
@@ -10,15 +10,15 @@
         rel="noopener noreferrer"
       >{{ editLinkText }}</a>
       <OutboundLink />
-    </div>
+    </span>
 
-    <div
+    <span
       v-if="lastUpdated"
       class="last-updated"
     >
       <span class="prefix">{{ lastUpdatedText }}:</span>
       <span class="time">{{ lastUpdated }}</span>
-    </div>
+    </span>
   </div>
 </template>
 
@@ -44,17 +44,16 @@ export default {
       return '最后更新时间'
     },
     editLink () {
-      const edit = this.$site.themeConfig.edit
+      const edit = this.$site.themeConfig.edit || {}
+      const repo = this.$site.themeConfig.repo
+      const docsPlatform = edit.docsPlatform || repo.platform
+      const docsDir = edit.docsDir || ''
+      const docsBranch = edit.docsBranch || 'master'
+      const docsRepositories = repo.owner + '/' + repo.repositories
+      const docsRepo = docsPlatform + edit.docsRepo || docsRepositories
       const showEditLink = isNil(this.$page.frontmatter.editLink)
         ? this.$site.themeConfig.editLinks
         : this.$page.frontmatter.editLink
-
-      const {
-        repo,
-        docsDir = edit.docsDir,
-        docsBranch = edit.docsBranch,
-        docsRepo =  (repo.platform + repo.owner + '/' + edit.docsRepo)
-      } = this.$site.themeConfig
 
       if (showEditLink && docsRepo && this.$page.relativePath) {
         return this.createEditLink(
@@ -65,13 +64,14 @@ export default {
           this.$page.relativePath
         )
       }
+      
       return null
     },
 
     editLinkText () {
       return (
         this.$themeLocaleConfig.editLinkText
-        || this.$site.themeConfig.edit.text
+        || this.$site.themeConfig.editLinkText
         || `编辑此页面`
       )
     }
@@ -104,21 +104,9 @@ export default {
         )
       }
 
-      const gitee = /gitee.com/
-      if (gitee.test(docsRepo)) {
-        const base = docsRepo
-        return (
-          base.replace(endingSlashRE, '')
-          + `/edit`
-          + `/${docsBranch}/`
-          + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
-          + path
-        )
-      }
-
       const base = outboundRE.test(docsRepo)
         ? docsRepo
-        : `https://github.com/${docsRepo}`
+        : repo.platform + docsRepo
       return (
         base.replace(endingSlashRE, '')
         + '/edit'
@@ -132,67 +120,36 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/wrapper.styl';
-
-.page-edit {
-  @extend $wrapper;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  overflow: auto;
-
-  .edit-link {
-    display: inline-block;
-
-    a {
-      color: lighten($textColor, 25%);
-      margin-right: 0.25rem;
-
-      &:hover {
-        color: lighten($accentColor, 10%);
-        text-decoration: none;
-      }
-    }
-  }
-
-  .last-updated {
-    float: right;
-    font-size: 0.9em;
-
-    .prefix {
-      font-weight: 500;
-      color: lighten($textColor, 25%);
-    }
-
-    .time {
-      font-weight: 400;
-      color: #767676;
-    }
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .page-edit {
-    .edit-link {
-      margin-bottom: 0.5rem;
-    }
-
-    .last-updated {
-      font-size: 0.8em;
-      float: none;
-      text-align: left;
-    }
-  }
-}
-
-[data-theme = dark ] & {
-  .page-edit {
-    .edit-link a, .last-updated .prefix {
-      color: lighten($dark[--textColor], 25%);
-
-      &:hover {
-        color: lighten($dark[--accentColor], 10%);
-      }
-    }
-  }
-}
+@require '../styles/wrapper.styl'
+.page-edit
+  @extend $wrapper
+  padding-top 1rem
+  padding-bottom 1rem
+  overflow auto
+  .edit-link
+    display inline-block
+    a
+      margin-right: 0.25rem
+  .last-updated
+    float right
+    font-size 0.9em
+    .prefix
+      font-weight 500
+      color lighten($textColor, 25%)
+    .time
+      font-weight 400
+      color #767676
+@media (max-width: $MQMobile)
+  .page-edit
+    padding 0 1.5rem
+    .edit-link
+      margin-bottom 0.5rem
+    .last-updated
+      font-size 0.8em
+      float none
+      text-align left
+[data-theme = dark ] &
+  .page-edit
+    .last-updated .prefix
+      color: lighten($dark[--textColor], 25%)
 </style>

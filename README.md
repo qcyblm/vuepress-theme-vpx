@@ -20,15 +20,38 @@
 ------------------
 
 # 介绍
-VPX是VuePress的一个主题，默认主题基础上做了些扩展功能;  
-主要添加网站备案，导航栏icon图标，Markdown自定义容器等功能；  
+VPX 是 VuePress 的一个主题，默认主题基础上做了些扩展功能；  
+主要添加 icon 图标、Markdown 自定义容器、Git 仓库和编辑链接扩展等功能；  
 主题追求：默认主题的提供下添加所需功能，官方的主题配置几乎完全一样。  
-使用本主题请先学习 [VuePress 默认主题](https://www.vuepress.cn/theme/default-theme-config.html) 配置，然后再使用本主题。
+使用本主题请先学习 [VuePress 默认主题](https://www.vuepress.cn/theme/default-theme-config.html)配置，然后再使用本主题。
+> 此主题继承自VuePress默认主题，VuePress 1.7.1+制作的主题。
 
 ## 文档
 查看我们的文档  
 GitHub ：[https://qcyblm.github.io/vuepress-theme-vpx/](https://qcyblm.github.io/vuepress-theme-vpx/)  
 gitee ：[https://qcyblm.gitee.io/vuepress-theme-vpx/](https://qcyblm.gitee.io/vuepress-theme-vpx/)
+
+## 关于@qcyblm/vuepress-theme-vpx主题在原主题基础上做了以下功能升级
+1. 引入 [Font Awesome](http://www.fontawesome.com.cn/faicons/) 图标库
+2. 新增`action` 可扩增性，添加 icon 图标
+3. 新增`action`、 `nav`、`sidebar`、`repo`、 `locales` icon 图标
+4. 扩展 `features` img、link、描述支持 html 渲染解析标签支持
+5. 扩展 `footer` 页脚栏、社交图片、版权等信息
+6. Git 仓库和编辑链接扩展
+7. 新增 返回顶部按钮
+8. 新增 暗黑模式
+9. 新增 滚动条美化
+10. 新增 侧边栏广告栏
+11. 新增 Markdown 自定义容器
+  - info 信息容器
+  - theorem 定理容器
+  - 居中容器
+  - 普通卡片列表
+  - 图片卡片列表
+12. 其他样式轻微调优
+
+> 如果有小伙伴有新功能的意见或者改进欢迎给我提意见和建议~
+
 ## 安装主题
 ``` sh
 yarn add @qcyblm/vuepress-theme-vpx -D
@@ -44,10 +67,6 @@ module.exports = {
   ...
 }
 ```
-
-## 贡献者
-
-[我也想为贡献者之一？](https://github.com/qcyblm/vuepress-theme-vpx/pulls)
 
 ## LICENSE
 [MIT](/LICENSE)

@@ -70,17 +70,11 @@ body .search-box
   bottom 0
   box-sizing border-box
   overflow-y auto
-  a.sidebar-link
-    &:hover
-      text-decoration: none
 
 {$contentClass}:not(.custom)
   @extend $wrapper
   > *:first-child
     margin-top $navbarHeight
-
-  a:hover
-    text-decoration underline
 
   p.demo
     padding 1rem 1.5rem
@@ -99,10 +93,10 @@ body .search-box
 
 a
   font-weight 500
-  color $accentColor
+  color lighten($accentColor, 25%)
   text-decoration none
   &:hover
-    text-decoration underline
+    color $accentColor
 
 p a code
   font-weight 400
@@ -169,9 +163,6 @@ a.header-anchor
   margin-top 0.125em
   opacity 0
 
-  &:hover
-    text-decoration none
-
 code, kbd, .line-number
   font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
 
@@ -189,13 +180,13 @@ table
   overflow-x: auto
 
 tr
-  border-top 1px solid #dfe2e5
+  border-top 1px solid $borderColor
 
   &:nth-child(2n)
     background-color #f6f8fa
 
 th, td
-  border 1px solid #dfe2e5
+  border 1px solid $borderColor
   padding .6em 1em
 
 .theme-container
@@ -233,61 +224,49 @@ th, td
 @require 'mobile.styl'
 
 // 暗黑模式
-[data-theme = dark ] & {
-  html,body,.theme-container{
-  background-color: #35363a
-  color: $dark[--textColor]
-  }
-  body .search-box{
-    input{
+[data-theme = dark ] &
+  html,body,.theme-container
+    background-color #35363a
+    color: $dark[--textColor]
+  body .search-box
+    input
       color: lighten($dark[--textColor], 25%)
       border: 1px solid darken($dark[--borderColor], 10%)
-      &:focus{
+      &:focus
         border-color: $dark[--accentColor]
-      }
-    }
-    .suggestions{
-      background: #292a2d
+    .suggestions
+      background #292a2d
       border: 1px solid darken($dark[--borderColor], 10%)
-    }
-    .suggestion{
-      &:hover{
+    .suggestion
+      &:hover
         background-color: #414254
-      }
-      a{
+      a
         color: lighten($dark[--textColor], 35%)
-      }
-      &.focused{
+      &.focused
         background-color: #414254
-        a{
+        a
           color: $dark[--accentColor]
-        }
-      }
-    }
-    @media (max-width: $MQMobile){
-      input{
+    @media (max-width: $MQMobile)
+      input
         border-color transparent
-      }
-    }
-  }
-  a {
-    color: $dark[--accentColor]
-  }
-  p a code{
-    color: $dark[--accentColor]
-  }
-  h2{
-    border-bottom: 1px solid $dark[--borderColor]
-  }
-  hr{
-    border-top: 1px solid $dark[--borderColor]
-  }
-  h1, h2, h3, h4, h5, h6{
-    &:hover .header-anchor{
+  a
+    color: lighten($dark[--textColor], 25%)
+    &:hover
       color: $dark[--accentColor]
-    }
-  }
-  div > .theme-code-group__nav{
+  p a code
+    color: $dark[--accentColor]
+  h2
+    border-bottom: 1px solid $dark[--borderColor]
+  hr
+    border-top: 1px solid $dark[--borderColor]
+  h1, h2, h3, h4, h5, h6
+    .header-anchor
+      color: $dark[--accentColor]
+  div > .theme-code-group__nav
     background-color: $dark[--codeBgColor]
-  }
-}
+  tr
+    border-top: 1px solid $dark[--borderColor]
+    &:nth-child(2n)
+      background-color: rgba(102,102,102,0.247)
+  th, td
+    border: 1px solid $dark[--borderColor]

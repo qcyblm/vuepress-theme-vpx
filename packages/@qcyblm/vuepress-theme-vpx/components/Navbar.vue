@@ -19,7 +19,7 @@
       >{{ $siteTitle }}</span>
     </RouterLink>
 
-    <div
+    <nav
       class="links"
       :style="linksWrapMaxWidth ? {
         'max-width': linksWrapMaxWidth + 'px'
@@ -32,7 +32,7 @@
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
       <NavLinks class="can-hide" />
       <ThemeSwitcher /> <!-- 暗黑模式 -->
-    </div>
+    </nav>
   </header>
 </template>
 
@@ -105,9 +105,6 @@ $navbar-horizontal-padding = 1.5rem
   line-height $navbarHeight - 1.4rem
   a, span, img
     display inline-block
-  a
-    &:hover
-      text-decoration none
   .home-link
     &:hover
       .site-name
@@ -149,24 +146,17 @@ $navbar-horizontal-padding = 1.5rem
       white-space nowrap
       text-overflow ellipsis
 
-[data-theme = dark ] & {
-  .navbar{
+[data-theme = dark ] &
+  .navbar
     border-bottom: 1px solid $dark[--borderColor]
-    background-color: #35363a
-    .home-link{
-      &:hover{
-        .site-name{
+    background-color #35363a
+    .home-link
+      &:hover
+        .site-name
           color: $dark[--accentColor]
-        }
-      }
-    }
-    .site-name{
+    .site-name
       color: $dark[--titleColor]
-    }
-    .links{
+    .links
       background-color: #35363a
-    }
-  }
-}
 
 </style>

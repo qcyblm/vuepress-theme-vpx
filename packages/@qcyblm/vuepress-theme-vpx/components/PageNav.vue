@@ -147,22 +147,29 @@ function flatten (items, res) {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
-
 .page-nav
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
   .inner
     min-height 2rem
-    margin-top 0
     border-top 1px solid $borderColor
-    padding-top 1rem
-    overflow auto // clear float
+    padding 1rem 0
+    margin 0
+    overflow auto
   .next
     float right
-[data-theme = dark ] & {
-  .page-nav .inner{
-    border-top: 1px solid $dark[--borderColor]
-  }
-}
+  a
+    color $accentColor
+@media (max-width: $MQMobile)
+  .page-nav
+    padding-top 0.5rem
+    .inner
+      padding 0.5rem 1rem
+[data-theme = dark ] &
+  .page-nav
+    .inner
+      border-top: 1px solid $dark[--borderColor]
+    a
+      color: $dark[--accentColor]
 </style>

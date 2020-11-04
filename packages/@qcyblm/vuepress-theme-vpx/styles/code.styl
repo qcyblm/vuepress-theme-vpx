@@ -136,35 +136,23 @@ div[class~="language-php"]:before
 
 @import '~prismjs/themes/prism-tomorrow.css'
 
-[data-theme = dark ] & {
-  {$contentClass}{
-    code{
+[data-theme = dark ] &
+  {$contentClass}
+    code
       background-color: #6666663F
       color: lighten($dark[--textColor], 20%)
-      .token{
-        &.inserted{
+      .token
+        &.inserted
           color: $dark[--accentColor]
-        }
-      }
-    }
-  }
-  {$contentClass}{
-    pre, pre[class*="language-"]{
+  {$contentClass}
+    pre, pre[class*="language-"]
       background-color: $dark[--codeBgColor]
-      code{
+      code
         background-color: transparent
-      }
-    }
-  }
-  div[class*="language-"]{
+  div[class*="language-"]
     background-color: $dark[--codeBgColor]
-    pre, pre[class*="language-"]{
+    pre, pre[class*="language-"]
       background: transparent
-    }
-    &.line-numbers-mode{
-      &::after{
+    &.line-numbers-mode
+      &::after
         background-color: $dark[--codeBgColor]
-      }
-    }
-  }
-}

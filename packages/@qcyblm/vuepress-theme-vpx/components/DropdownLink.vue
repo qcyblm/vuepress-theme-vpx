@@ -9,11 +9,7 @@
       :aria-label="dropdownAriaLabel"
       @click="handleDropdown"
     >
-      <i 
-        v-if="item.icon"
-        :class="`${item.icon}`"
-      >
-      </i>
+      <i v-if="item.icon" :class="item.icon" />
       <span class="title">
         {{ item.text }}
       </span>
@@ -27,11 +23,7 @@
       :aria-label="dropdownAriaLabel"
       @click="setOpen(!open)"
     >
-     <i 
-        v-if="item.icon"
-        :class="`${item.icon}`"
-      >
-      </i>
+      <i v-if="item.icon" :class="item.icon" />
       <span class="title">{{ item.text }}</span>
       <span
         class="arrow"
@@ -264,43 +256,28 @@ export default {
       border-radius 0.25rem
       white-space nowrap
       margin 0
-  [data-theme = dark ] & {
-    .dropdown-wrapper{
-      .nav-dropdown{
+  [data-theme = dark ] &
+    .dropdown-wrapper
+      .nav-dropdown
         background-color: #35363a
-      }
-    }
-  }
 
-[data-theme = dark ] & {
-  .dropdown-wrapper{
-    .dropdown-title{
+[data-theme = dark ] &
+  .dropdown-wrapper
+    .dropdown-title
       color: $dark[--textColor]
-    }
-    .mobile-dropdown-title{
+    .mobile-dropdown-title
       color: $dark[--textColor]
       font-size: inherit
-        &:hover{
+      &:hover
+        color: $dark[--accentColor]
+    .nav-dropdown
+      .dropdown-item a
+        &:hover
           color: $dark[--accentColor]
-        }
-    }
-    .nav-dropdown{
-      .dropdown-item a{
-        &:hover{
+        &.router-link-active
           color: $dark[--accentColor]
-        }
-        &.router-link-active{
-          color: $dark[--accentColor]
-          &::after{
+          &::after
             border-left: 5px solid $dark[--accentColor]
             border-top: 3px solid transparent
             border-bottom: 3px solid transparent
-          }
-        }
-      }
-    }
-  }
-
-}
-
 </style>
