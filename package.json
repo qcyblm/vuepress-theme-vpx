@@ -27,7 +27,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@qcyblm/vuepress-theme-vpx": "^1.0.1",
+    "@qcyblm/vuepress-theme-vpx": "^1.0.2",
     "moment": "^2.29.0",
     "vuepress": "^1.7.1"
   },

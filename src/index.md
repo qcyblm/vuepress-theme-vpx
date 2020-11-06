@@ -58,6 +58,8 @@ module.exports = {
 
 ### 更新日志
 
+#### V1.0.2 (2020.11.07)
+- 修复 Git 仓库和编辑链接
 #### V1.0.1 (2020.11.04)
 1. 引入 [Font Awesome](http://www.fontawesome.com.cn/faicons/) 图标库
 2. `action` 可扩增性，添加 icon 图标

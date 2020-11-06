@@ -870,10 +870,10 @@
   resolved "https://registry.npm.taobao.org/@nodelib/fs.stat/download/@nodelib/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha1-K1o6s/kYzKSKjHVMCBaOPwPrphs=
 
-"@qcyblm/vuepress-theme-vpx@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/@qcyblm/vuepress-theme-vpx/download/@qcyblm/vuepress-theme-vpx-1.0.1.tgz?cache=0&sync_timestamp=1604501407872&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40qcyblm%2Fvuepress-theme-vpx%2Fdownload%2F%40qcyblm%2Fvuepress-theme-vpx-1.0.1.tgz#39162ce4fe1acd184b162f1c1b499b69075a7390"
-  integrity sha1-ORYs5P4azRhLFi8cG0mbaQdac5A=
+"@qcyblm/vuepress-theme-vpx@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/@qcyblm/vuepress-theme-vpx/download/@qcyblm/vuepress-theme-vpx-1.0.2.tgz?cache=0&sync_timestamp=1604679157712&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40qcyblm%2Fvuepress-theme-vpx%2Fdownload%2F%40qcyblm%2Fvuepress-theme-vpx-1.0.2.tgz#cc412fe2f93dd4c0019593e7db00db41d0926032"
+  integrity sha1-zEEv4vk91MABlZPn2wDbQdCSYDI=
   dependencies:
     "@vuepress/plugin-active-header-links" "1.7.1"
     "@vuepress/plugin-nprogress" "1.7.1"

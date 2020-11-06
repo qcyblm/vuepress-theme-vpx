@@ -101,14 +101,14 @@ export default {
       if (repo) {
         return /^http[s]?:/.test(repo.owner)
           ? repo
-          : `${ repo.platform }${ repo.owner }/${ repo.repositories }`
+          : `${ repo.platform }${ repo.owner }/${ repo.repositories || "" }`
       }
       return null
     },
     repoLabel () {
       if (!this.repoLink) return
-      if (this.repo.Label) {
-        return this.repo.Label
+      if (this.repo.label) {
+        return this.repo.label
       }
 
       const repoHost = this.repoLink.match(/^http[s]?:\/\/[^/]+/)[0]

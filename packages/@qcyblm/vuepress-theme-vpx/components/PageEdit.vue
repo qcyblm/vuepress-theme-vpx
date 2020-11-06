@@ -46,10 +46,10 @@ export default {
     editLink () {
       const edit = this.$site.themeConfig.edit || {}
       const repo = this.$site.themeConfig.repo
-      const docsPlatform = edit.docsPlatform || repo.platform
+      const docsPlatform = edit.docsPlatform || repo.Platform
       const docsDir = edit.docsDir || ''
       const docsBranch = edit.docsBranch || 'master'
-      const docsRepositories = repo.owner + '/' + repo.repositories
+      const docsRepositories = repo.owner + '/' + ( repo.repositories || "")
       const docsRepo = docsPlatform + edit.docsRepo || docsRepositories
       const showEditLink = isNil(this.$page.frontmatter.editLink)
         ? this.$site.themeConfig.editLinks
