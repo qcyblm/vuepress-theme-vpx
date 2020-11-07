@@ -49,12 +49,13 @@ export default {
 </script>
 
 <style lang="stylus">
-ul
-  padding 0
-  margin 0 1rem
-  list-style none
-li
-  padding 0 5px
+.social-icon
+  ul
+    padding 0
+    margin 0 1rem
+    list-style none
+  li
+    padding 0 5px
 .fa, .fab
   &-weixin
     color #1aad19

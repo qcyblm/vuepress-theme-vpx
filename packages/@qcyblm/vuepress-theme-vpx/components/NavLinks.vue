@@ -129,6 +129,9 @@ export default {
 <style lang="stylus">
 .nav-links
   display inline-block
+  padding 0
+  margin 0
+  list-style none
   a
     line-height 1.4rem
     color inherit

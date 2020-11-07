@@ -169,6 +169,7 @@ export default {
       display flex
       justify-content center
       align-content center
+      list-style-type none
     .action-button
       font-size 1.2rem
       color #fff
