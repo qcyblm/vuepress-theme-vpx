@@ -22,11 +22,6 @@ footerWrap:
   item:
   - text: QQ 群
     link: https://qm.qq.com/cgi-bin/qm/qr?k=LXzCQVHzXBmJn99XpR3KWamSBnACbAkt&jump_from=webapi
-socialIcons:  # 社交图标，显示于页脚栏 (可选，需启动 footer 支持)
-- type: 'GitHub'  # 社交平台
-  link: 'https://github.io/qcyblm'  # 社交链接
-- type: 'QQ'  # 社交平台
-  link: 'https://gith.io/qcyblm'  # 社交链接
 ---
 ### 安装主题
 
