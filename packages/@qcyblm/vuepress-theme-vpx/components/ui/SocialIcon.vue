@@ -1,6 +1,6 @@
 <template>
   <li>
-    <a class="social-icon" :href="link" :title="type" :class="extraClass" target="_blank" rel="noopener noreferrer">
+    <a :href="link" :title="type" :class="extraClass" target="_blank" rel="noopener noreferrer">
       <i :class="iconClass" class="fa-lg" />
       <span class="sr-only">{{ type }}</span>
     </a>
@@ -49,13 +49,6 @@ export default {
 </script>
 
 <style lang="stylus">
-.social-icon
-  ul
-    padding 0
-    margin 0 1rem
-    list-style none
-  li
-    padding 0 5px
 .fa, .fab
   &-weixin
     color #1aad19

@@ -1,7 +1,3 @@
----
-icon: fa fa-home
----
-
 # 介绍
 VPX 是 VuePress 的一个主题，默认主题基础上做了些扩展功能；  
 主要添加 icon 图标、Markdown 自定义容器、Git 仓库和编辑链接扩展等功能；  

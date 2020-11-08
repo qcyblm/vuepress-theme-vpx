@@ -1,7 +1,3 @@
----
-icon: fa fa-home
----
-
 # Markdown 容器
 
 Markdown 容器是对 Markdown 语法的一个扩展，使用简单的语法就可以在页面中呈现丰富的效果。
@@ -128,6 +124,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -135,6 +132,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -142,6 +140,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 ```
 :::
 
@@ -154,6 +153,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -161,6 +161,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -168,6 +169,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 ```
 :::
 
@@ -199,6 +201,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -206,6 +209,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -213,6 +217,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 ```
 :::
 
@@ -225,6 +230,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -232,6 +238,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 - name: 青春永不落幕
   desc: 一位静态网站设计爱好者
   avatar: https://s.gravatar.com/avatar/391164c0f6fa34cedeb20590ae49dd9f?s=80
@@ -239,6 +246,7 @@ console.log('这是一个详情块')
   nameColor: ''
   bgColor: ''
   textColor: ''
+  icon: 'fab fa-github'
 ```
 :::
 ````
@@ -265,6 +273,7 @@ console.log('这是一个详情块')
   nameColor: '' # 名称颜色 (可选)，默认 $cardTitle。颜色值有 `#` 号时请添加单引号
   bgColor: '' # 背景色 (可选)，默认 $cardBgColor。颜色值有 `#` 号时请添加单引号
   textColor: '' # 文本色 (可选)，默认 $cardTextColor 颜色值有 `#` 号时请添加单引号
+  icon: '' # icon 右侧图标 (可选)
 ```
 :::
 ````
@@ -280,6 +289,7 @@ console.log('这是一个详情块')
   * `nameColor` 名称颜色 (可选)，默认 $cardTitle。颜色值有 `#` 号时请添加单引号
   * `bgColor` 背景色 (可选)，默认 $cardBgColor。颜色值有 `#` 号时请添加单引号
   * `textColor` 文本色 (可选)，默认 $cardTextColor 颜色值有 `#` 号时请添加单引号
+  * `icon` icon 右侧图标 (可选)
 
 下面再来看另外一个示例：
 
@@ -294,12 +304,14 @@ console.log('这是一个详情块')
   nameColor: '#000'
   bgColor: '#CBEAFA'
   textColor: '#242A38'
+  icon: 'fab fa-github'
 - name: vuepress-theme-vpx
   desc: 一款基于 VuePress 开发的主题
   link: https://qcyblm.github.io/vuepress-theme-vpx/
   nameColor: '#000'
   bgColor: '#CBEAFA'
   textColor: '#242A38'
+  icon: 'fab fa-github'
 ```
 :::
 
@@ -315,12 +327,14 @@ console.log('这是一个详情块')
   nameColor: '#000'
   bgColor: '#CBEAFA'
   textColor: '#242A38'
+  icon: 'fab fa-github'
 - name: vuepress-theme-vpx
   desc: 一款基于 VuePress 开发的主题
   link: https://qcyblm.github.io/vuepress-theme-vpx/
   nameColor: '#000'
   bgColor: '#CBEAFA'
   textColor: '#242A38'
+  icon: 'fab fa-github'
 ```
 :::
 

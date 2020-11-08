@@ -209,6 +209,7 @@ function getCardLinksDOM(dataList, row) {
         <p class="name" style="${nameColor}">${item.name}<OutboundLink /></p>
         <p class="desc" style="${textColor}">${item.desc}</p>
       </div>`,
+      `${item.icon ? '<i class="' + item.icon + ' fa-lg fa-fw " />' : ''}`,
       `</a>\n`
     ].join("")
   })
@@ -229,6 +230,7 @@ function getCardListDOM(dataList, row) {
         <p class="name" style="${nameColor}">${item.name}<OutboundLink /></p>
         <p class="desc" style="${textColor}">${item.desc}</p>
       </div>`,
+      `${item.icon ? '<i class="' + item.icon + ' fa-lg fa-fw " />' : ''}`,
       `</a>\n`
     ].join("")
   })

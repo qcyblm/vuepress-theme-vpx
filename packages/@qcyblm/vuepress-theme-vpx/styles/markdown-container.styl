@@ -31,16 +31,12 @@ h1, h2, h3, h4, h5, h6
       box-shadow 1px 1px 2px 0 rgba(0,0,0,.06)
       transition all .4s
       &:hover
-        text-decoration none
         box-shadow 0 10px 20px -10px #999
         transform translateY(-5px)
         p
           text-shadow 3px 2px 5px rgba(0, 0, 0, 0.15)
       p
-        margin 0
         padding 0 1rem
-        transition text-shadow .4s
-        text-align center
       .name
         margin .2rem 0 .3rem 0
         color $cardTitleColor
@@ -67,8 +63,8 @@ h1, h2, h3, h4, h5, h6
       &:hover
         box-shadow 0 10px 20px -10px #999
         transform translateY(-5px)
-        .name
-          text-decoration underline $accentColor
+        i
+          color: $accentColor
         img 
           transform rotate(8deg) scale(1.1, 1.1)
           box-shadow 3px 2px 7px rgba(0, 0, 0, 0.15)
@@ -78,11 +74,12 @@ h1, h2, h3, h4, h5, h6
         width 32px
         height 32px
         border-radius 50%
-        border 2px solid #fff
-        margin 1rem
-        margin-right 0
+        margin 1rem 0 0 1rem 
         box-shadow 3px 2px 5px rgba(0, 0, 0, 0.08)
         transition all .4s
+      i
+        margin auto 0 auto -1rem
+        color #666
       div
         flex 1
         display inline-block
@@ -96,7 +93,7 @@ h1, h2, h3, h4, h5, h6
           margin .2rem 0 .3rem 0
           color $cardTitleColor
           font-weight 500
-          white-space nowrap
+          text-align center
         .desc
           font-size .8rem
           line-height 1.1rem
@@ -104,7 +101,6 @@ h1, h2, h3, h4, h5, h6
           margin-bottom .2rem
           color $cardTextColor
           text-align left
-          white-space nowrap
     .card-item.row-1
       width calc(100% - .7rem)
       img
@@ -139,26 +135,28 @@ h1, h2, h3, h4, h5, h6
       &:hover
         box-shadow 0 10px 20px -10px #999
         transform translateY(-5px)
-        .name
-          text-decoration underline $accentColor
         img 
           transform rotate(8deg) scale(1.1, 1.1)
           box-shadow 3px 2px 7px rgba(0, 0, 0, 0.15)
         div p
           text-shadow 3px 2px 5px rgba(0, 0, 0, 0.15)
+        i
+          color: $accentColor
       img
-        width 60px
-        height 60px
+        width 32px
+        height 32px
         border-radius 50%
-        border 2px solid #fff
-        margin 1rem
-        margin-right 0
+        margin 1rem 0 0 1rem
         box-shadow 3px 2px 5px rgba(0, 0, 0, 0.08)
         transition all .4s
+        vertical-align middle
+      i
+        margin auto 0 auto -1rem
+        color #666
       div
         flex 1
         display inline-block
-        float right 
+        float right
         padding 1rem 0
         p
           margin 0
@@ -216,7 +214,6 @@ h1, h2, h3, h4, h5, h6
       align-content stretch
       transition box-shadow .3s
       &:hover
-        text-decoration none
         box-shadow 0 10px 20px -10px #999
         transform translateY(-1px)
       .box-img
@@ -237,14 +234,12 @@ h1, h2, h3, h4, h5, h6
         transition color .3s
         &:hover
           color $accentColor
-          text-decoration none
       .box-info
         padding .8rem 1rem
         background-color $cardBgColor
         &:hover
           .name
             color $accentColor !important
-            text-decoration underline
         .name
           color $cardTitleColor
           font-weight 500
@@ -272,10 +267,9 @@ h1, h2, h3, h4, h5, h6
           float left
         &:hover
           span
-            text-decoration underline !important
             color $accentColor !important
           img
-            transform rotate(8deg) scale(1.2, 1.2)
+            transform rotate(8deg) scale(1.05, 1.05)
         span 
           line-height 1.8rem
           float left
@@ -353,22 +347,69 @@ h1, h2, h3, h4, h5, h6
 
 // 暗黑模式
 [data-theme = dark ] & 
-  .card-list
-    .card-item
-      background-color: $dark[--cardBgColor]
-      color: $dark[--cardTextColor]
-      p.name
-        color: $dark[--cardTitleColor]
-      p.desc,a
-        color: $dark[--cardTextColor]
-      .box-info
+  // 普通卡片列表1
+  .cardLinkContainer
+    .card-list
+      .card-item
+        background: $dark[--cardBgColor]
         .name
           color: $dark[--cardTitleColor]
-        p.desc
+
+  // 普通卡片列表2
+  .cardLinksContainer
+    .card-list
+      .card-item
+        background: $dark[--cardBgColor]
+        &:hover
+          i
+            color: $dark[--accentColor]
+        i
+          color: #252526
+        div
+          .name
+            color: $dark[--cardTitleColor]
+          .desc
+            color: $dark[--cardTextColor]
+
+  // 普通卡片列表3
+  .cardListContainer
+    .card-list
+      .card-item
+        background: $dark[--cardBgColor]
+        &:hover
+          i
+            color: $dark[--accentColor]
+        i
+          color: #252526
+        div
+          .name
+            color: $dark[--cardTitleColor]
+          .desc
+            color: $dark[--cardTextColor]
+
+  // 图文卡片列表
+  .cardImgListContainer
+    .card-list
+      .card-item
+        color: $dark[--cardTextColor]
+        a
           color: $dark[--cardTextColor]
-        background-color: $dark[--cardBgColor]
-      .box-footer
-        border-top-color: $dark[--borderColor]
-        background-color: $dark[--cardImgFooterBgColor]
-        span
-          color: $dark[--cardImgFooterAuthorColor]
+          &:hover
+            color: $dark[--accentColor]
+        .box-info
+          background-color: $dark[--cardBgColor]
+          &:hover
+            .name
+              color: $dark[--accentColor] !important
+          .name
+            color: $dark[--cardTitleColor]
+          .desc
+            color: $dark[--cardTextColor]
+        .box-footer
+          border-top:  1px solid $dark[--borderColor]
+          background-color: $dark[--cardImgFooterBgColor]
+          span
+            color: $dark[--cardImgFooterAuthorColor]
+          &:hover
+            span
+              color: $dark[--accentColor] !important

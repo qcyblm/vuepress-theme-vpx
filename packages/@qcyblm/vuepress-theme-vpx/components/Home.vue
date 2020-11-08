@@ -74,6 +74,7 @@
               :type="icon.type"
               :link="icon.link"
               :key="icon.link"
+              class="social-icon"
               extra-class="inverted"
             />
           </ul>
@@ -269,6 +270,8 @@ export default {
       ul li
         display inline-block
         line-height 30px
+      .social-icon
+        padding 0 5px
     .right-wrap
       flex 1
       text-align center
