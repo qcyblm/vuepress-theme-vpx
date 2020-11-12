@@ -1,5 +1,3 @@
-const moment = require('moment')
-moment.locale("zh-cn");
 module.exports = {
   base: '/vuepress-theme-vpx/',
   temp: '.temp',
@@ -39,7 +37,6 @@ module.exports = {
       docsBranch: 'master',
       docsDir: 'src',
     },
-    lastUpdated: '最后更新时间',
     footer:{
       licensedLink: 'https://github.com/qcyblm/vuepress-theme-vpx/blob/master/LICENSE',
       licensed: 'MIT',
@@ -55,14 +52,6 @@ module.exports = {
     }
   },
   plugins: [
-    [
-      '@vuepress/last-updated',
-      {
-        transformer: (timestamp) => {
-          return moment(timestamp).format("LLLL")
-        }
-      }
-    ],
     ['vuepress-plugin-code-copy',
       {
         align: 'bottom',
