@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: VuePress build and deploy
 on:  
   push:
     branches: 
@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: vuepress-deploy
+    - name: VuePress-Deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
