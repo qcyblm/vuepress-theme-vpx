@@ -8,14 +8,20 @@ on:
 jobs: #脚本内容
   build-deploy:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
     
     steps:
     - uses: actions/checkout@v2.3.4
-    - run: npm install yarn
-
+    - uses: actions/setup-node@v1 
+      with:
+        node-version: ${{ matrix.node-version }}
+    
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}} #这里引用的是刚才生成的私钥
         PUBLISH_BRANCH: gh-pages #发布到的分支
-        PUBLISH_DIR: docs
-        run: yarn && yarn docs:build
+        PUBLISH_DIR: docs #需要发布的内容
+      run: npm install yarn && yarn && yarn docs:build
