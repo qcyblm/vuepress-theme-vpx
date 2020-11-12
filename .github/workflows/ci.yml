@@ -13,10 +13,10 @@ jobs: #脚本内容
     - uses: actions/checkout@v2.3.4
     - run: npm install yarn
     - run: yarn
-    - run: yarn docs:build
 
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}} #这里引用的是刚才生成的私钥
         PUBLISH_BRANCH: gh-pages #发布到的分支
         PUBLISH_DIR: docs
+        run: yarn docs:build
