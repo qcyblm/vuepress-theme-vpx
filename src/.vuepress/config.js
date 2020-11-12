@@ -3,7 +3,6 @@ moment.locale("zh-cn");
 module.exports = {
   base: '/vuepress-theme-vpx/',
   temp: '.temp',
-  dest: 'docs',
   locales: {
     '/': {
       lang: 'zh-CN',
