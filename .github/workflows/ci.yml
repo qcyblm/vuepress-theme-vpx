@@ -24,4 +24,9 @@ jobs: #脚本内容
         GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}} #这里引用的是刚才生成的私钥
         PUBLISH_BRANCH: gh-pages #发布到的分支
         PUBLISH_DIR: docs #需要发布的内容
-      run: npm install yarn && yarn && yarn docs:build
+      run: |
+        npm install yarn
+        yarn
+        yarn docs:build
+        git commit -m 'deploy'
+        git push git@github.com:qcyblm/vuepress-theme-vpx.git master:gh-pages
