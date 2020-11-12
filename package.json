@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@qcyblm/vuepress-theme-vpx": "^1.0.4",
-    "moment": "^2.29.0",
     "vuepress": "^1.7.1"
   },
   "dependencies": {
