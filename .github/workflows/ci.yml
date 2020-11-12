@@ -1,24 +1,17 @@
-name: auto publish #发布名称
-
-on:  
-  push: #触发方式
-    branches: 
-      - master #触发分支
-
-jobs: #脚本内容
-  build-deploy:
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v1
-    - run: |
-        npm install yarn
-        yarn
-        yarn docs:build
-    
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{secrets.ACCESS_TOKEN}} #这里引用的是刚才生成的私钥
-        PUBLISH_BRANCH: gh-pages #发布到的分支
-        PUBLISH_DIR: docs #需要发布的内容
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_REPO: qcyblm/vuepress-theme-vpx
+        TARGET_BRANCH: gh-pages
+        BUILD_SCRIPT: yarn && yarn docs:build
+        BUILD_DIR: docs
