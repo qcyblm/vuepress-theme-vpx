@@ -2,6 +2,7 @@ const moment = require('moment')
 moment.locale("zh-cn");
 module.exports = {
   base: '/vuepress-theme-vpx/',
+  temp: '.temp',
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -12,7 +13,6 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  dest: 'docs',
   theme: '@qcyblm/vpx',
   themeConfig: {
     logo: '/assets/img/logo.png',
