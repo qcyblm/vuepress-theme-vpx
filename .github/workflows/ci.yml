@@ -28,5 +28,8 @@ jobs: #脚本内容
         npm install yarn
         yarn
         yarn docs:build
+        git config user.email "qcyblm@outlook.com"
+        git config user.name "qcyblm"
+        git config user.password "${{secrets.PASSWORD}}"
         git commit -m 'deploy'
         git push git@github.com:qcyblm/vuepress-theme-vpx.git master:gh-pages
