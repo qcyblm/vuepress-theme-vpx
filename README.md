@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://qcyblm.github.io/vuepress-theme-vpx/" target="_blank">
-    <img width="180" src="./docs/vpx.png" alt="logo">
+    <img width="180" src="https://qcyblm.github.io/vuepress-theme-vpx/vpx.png" alt="logo">
   </a>
 </p>
 
