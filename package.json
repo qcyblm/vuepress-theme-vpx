@@ -9,7 +9,8 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev src",
-    "docs:build": "vuepress build src"
+    "docs:build": "vuepress build src",
+    "deploy": "bash deploy.sh"
   },
   "keywords": [
     "vpx",
