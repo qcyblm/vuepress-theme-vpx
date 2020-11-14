@@ -24,6 +24,9 @@ git add -A
 git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
+cd - # 退回开始所在目录
+rm -rf docs/.vuepress/dist
+
 # Deploy to Gitee
 if [ -z "$GITEE_TOKEN" ]; then  # -z 字符串 长度为0则为true；$GITEE_TOKEN来自于GitHub仓库`Settings/Secrets`设置的私密环境变量
   giteeUrl=git@gitee.com:qcyblm/vuepress-theme-vpx.git
@@ -36,5 +39,3 @@ git init
 git add -A
 git commit -m "${msg}"
 git push $giteeUrl master # 推送到Gitee
-
-cd -
