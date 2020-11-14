@@ -4,7 +4,8 @@
 set -e
 
 # 生成静态文件
-npm run docs:build
+npm install yarn
+yarn docs:build
 
 # 进入生成的文件夹
 cd src/.vuepress/dist
@@ -28,6 +29,10 @@ git push -f $githubUrl master:gh-pages # 推送到github
 cd - 
 # 确保脚本抛出遇到的错误
 set -e
+
+# 生成静态文件
+npm install yarn
+yarn docs:build
 
 # 进入生成的文件夹
 cd src/.vuepress/dist
