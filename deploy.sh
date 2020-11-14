@@ -16,9 +16,10 @@ else
   giteeUrl=https://qcyblm:${GITEE_TOKEN}@gitee.com/qcyblm/vuepress-theme-vpx.git # 使用GitHub CI
   git config --global user.name "qcyblm"
   git config --global user.email "${GITEE_EMAIL}"
-  git config --global user.password "${GITEE_PASSWORD}"
 fi
 git init
 git add -A
 git commit -m "${msg}"
 git push $giteeUrl master # 推送到Gitee
+
+cd - 
