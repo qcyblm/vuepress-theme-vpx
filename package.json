@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "VPX theme for VuePress",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qcyblm/vuepress-theme-vpx.git"
-  },
   "scripts": {
     "docs:dev": "vuepress dev src",
     "docs:build": "vuepress build src",
@@ -20,10 +16,6 @@
   ],
   "author": "qcyblm",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/qcyblm/vuepress-theme-vpx/issues"
-  },
-  "homepage": "https://github.com/qcyblm/vuepress-theme-vpx#readme",
   "publishConfig": {
     "access": "public"
   },
