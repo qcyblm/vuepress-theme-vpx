@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm install yarn
+npm install -g yarn
 yarn
 yarn docs:build
 
@@ -32,7 +32,7 @@ cd -
 set -e
 
 # 生成静态文件
-npm install yarn
+npm install -g yarn
 yarn
 yarn docs:build
 
