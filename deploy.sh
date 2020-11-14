@@ -32,6 +32,7 @@ else
   git config --global user.name "qcyblm"
   git config --global user.email "${GITEE_EMAIL}"
 fi
+git init
 git add -A
 git commit -m "${msg}"
 git push $giteeUrl master # 推送到Gitee
