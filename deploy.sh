@@ -4,7 +4,6 @@
 set -e
 
 # 生成静态文件
-npm install -g yarn
 yarn
 yarn docs:build
 
@@ -32,8 +31,6 @@ cd -
 set -e
 
 # 生成静态文件
-npm install -g yarn
-yarn
 yarn docs:build
 
 # 进入生成的文件夹
