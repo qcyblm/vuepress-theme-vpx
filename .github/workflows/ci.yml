@@ -18,6 +18,5 @@ jobs: # 工作流
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
           npm install yarn
-          yarn config set registry https://registry.npm.taobao.org/
           yarn
           yarn deploy
