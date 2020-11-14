@@ -14,10 +14,10 @@ if [ -z "$GITEE_TOKEN" ]; then  # -z 字符串 长度为0则为true；$GITEE_TOK
   giteeUrl=git@gitee.com:qcyblm/vuepress-theme-vpx.git
 else
   giteeUrl=https://qcyblm:${GITEE_TOKEN}@gitee.com/qcyblm/vuepress-theme-vpx.git # 使用GitHub CI
-  git config --global user.name "qcyblm"
-  git config --global user.email "qcyblm@163.com"
 fi
 git init
+git config user.name "qcyblm"
+git config user.email "qcyblm@163.com"
 git add -A
 git commit -m "${msg}"
 git push $giteeUrl master # 推送到Gitee
