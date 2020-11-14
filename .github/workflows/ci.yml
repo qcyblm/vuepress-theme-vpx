@@ -17,5 +17,5 @@ jobs: # 工作流
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
-          npm install
+          npm install -g yarn
           npm run deploy
