@@ -18,7 +18,7 @@ else
   msg='来自GitHub Action的自动部署'
   githubUrl=https://qcyblm:${GITHUB_TOKEN}@github.com/qcyblm/vuepress-theme-vpx.git
   git config --global user.name "qcyblm"
-  git config --global user.email "qcyblm@outlook.com"
+  git config --global user.email "${GITHUB_EMAIL}"
 fi
 git init
 git add -A
@@ -31,7 +31,7 @@ if [ -z "$GITEE_TOKEN" ]; then  # -z 字符串 长度为0则为true；$GITEE_TOK
 else
   giteeUrl=https://qcyblm:${GITEE_TOKEN}@gitee.com/qcyblm/vuepress-theme-vpx.git # 使用GitHub CI
   git config --global user.name "qcyblm"
-  git config --global user.email "qcyblm@163.com"
+  git config --global user.email "${GITEE_EMAIL}"
 fi
 git push -f $giteeUrl master # 推送到Gitee
 
