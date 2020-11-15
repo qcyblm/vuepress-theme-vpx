@@ -11,7 +11,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  theme: '@qcyblm/vpx',
+  theme: require.resolve('../../packages/@qcyblm/vuepress-theme-vpx'),
   themeConfig: {
     logo: '/assets/img/logo.png',
     BackToTop: true,
