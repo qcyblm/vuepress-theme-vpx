@@ -23,7 +23,7 @@ else
 fi
 git init
 git add -A
-git commit -m "${msg}"
+git commit -S -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
 # Deploy to Gitee
