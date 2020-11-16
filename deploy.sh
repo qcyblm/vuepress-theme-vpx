@@ -17,13 +17,12 @@ if [ -z "$GITHUB_TOKEN" ]; then
 else
   msg='来自GitHub Action的自动部署'
   githubUrl=https://qcyblm:${GITHUB_TOKEN}@github.com/qcyblm/vuepress-theme-vpx.git
-  git config --global user.signingkey "${GITHUB_GPG}"
   git config --global user.name "qcyblm"
   git config --global user.email "${GITHUB_EMAIL}"
 fi
 git init
 git add -A
-git commit -S -m "${msg}"
+git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
 # Deploy to Gitee
@@ -31,11 +30,9 @@ if [ -z "$GITEE_TOKEN" ]; then  # -z 字符串 长度为0则为true；$GITEE_TOK
   giteeUrl=git@gitee.com:qcyblm/vuepress-theme-vpx.git
 else
   giteeUrl=https://qcyblm:${GITEE_TOKEN}@gitee.com/qcyblm/vuepress-theme-vpx.git # 使用GitHub CI
-  git config --global user.signingkey "${GITEE_GPG}"
   git config --global user.name "qcyblm"
   git config --global user.email "${GITEE_EMAIL}"
 fi
-git commit -S -m "${msg}"
 git push -f $giteeUrl master # 推送到Gitee
 
 cd - 
