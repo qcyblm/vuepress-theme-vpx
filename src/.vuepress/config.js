@@ -18,7 +18,8 @@ module.exports = {
     nav: [
       { text: '首页', icon: 'fa fa-home', link: '/' },
       { text: '指南', icon: 'fa fa-book', link: '/guide/' },
-      { text: '配置', icon: 'fa fa-cogs', link: '/config/' }
+      { text: '配置', icon: 'fa fa-cogs', link: '/config/' },
+      { text: '案例', icon: 'fa fa-th', link: '/example' }
     ],
     sidebar: {
       '/guide/': getGuideSidebar('指南'),
