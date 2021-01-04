@@ -21,8 +21,8 @@ export default {
       isLight: true,
     };
   },
+  // 窗体加载时运行-wjt
   created() {
-    console.log(2);
     if (!window.localStorage) {
       alert("浏览器支持localstorage");
       return false;
