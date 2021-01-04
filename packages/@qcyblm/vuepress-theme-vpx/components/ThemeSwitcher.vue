@@ -18,32 +18,80 @@ export default {
   name: "ThemeSwitcher",
   data() {
     return {
-      isLight: '',
+      isLight: "",
     };
   },
-  // 窗体加载时运行-wjt
   created() {
+    let htmlTag = document.getElementsByTagName("html")[0];
+    //动态加载当前设置的主题
     if (!window.localStorage) {
-      alert("浏览器支持localstorage");
+      alert("浏览器需要支持localstorage");
       return false;
     } else {
       //主逻辑业务
       var storage = window.localStorage;
       this.isLight = storage.getItem("theme");
       // console.log(storage.getItem("theme"))
-      let htmlTag = document.getElementsByTagName("html")[0];
-      if (this.isLight === 'light') {
+
+      if (this.isLight === "light") {
         this.isLight = true;
         window.localStorage.setItem("theme", "light");
         htmlTag.setAttribute("data-theme", "light");
         this.$emit("themeMode", "light");
       } else {
-        this.isLight= false
+        this.isLight = false;
         window.localStorage.setItem("theme", "dark");
         htmlTag.setAttribute("data-theme", "dark");
         this.$emit("themeMode", "dark");
       }
     }
+
+    //获取系统主题
+
+    /*判断是否支持主题色*/
+    if (window.matchMedia("(prefers-color-scheme)").media === "not all") {
+      console.log("Browser doesn't support dark mode");
+    }
+
+    /*判断是否处于深色模式*/
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      //Do some thing
+      this.isLight = false;
+      // console.log("prefers-color-scheme: dark");
+      window.localStorage.setItem("theme", "dark");
+      htmlTag.setAttribute("data-theme", "dark");
+      this.$emit("themeMode", "dark");
+    }
+
+    /*判断是否处于浅色模式*/
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      //Do some thing
+      this.isLight = true;
+      // console.log("prefers-color-scheme: light");
+      window.localStorage.setItem("theme", "light");
+      htmlTag.setAttribute("data-theme", "light");
+      this.$emit("themeMode", "light");
+    }
+
+    /*模式切换听器*/
+    // var listeners = {
+    //   dark: function (mediaQueryList) {
+    //     if (mediaQueryList.matches) {
+    //       alert("您切换到深色模式了！");
+    //     }
+    //   },
+    //   light: function (mediaQueryList) {
+    //     if (mediaQueryList.matches) {
+    //       alert("您切换到浅色模式了！");
+    //     }
+    //   },
+    // };
+    // window
+    //   .matchMedia("(prefers-color-scheme: dark)")
+    //   .addListener(listeners.dark);
+    // window
+    //   .matchMedia("(prefers-color-scheme: light)")
+    //   .addListener(listeners.light);
   },
   methods: {
     themeSwitch() {
