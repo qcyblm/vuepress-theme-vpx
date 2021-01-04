@@ -103,7 +103,7 @@
             </li>          
             <li v-for="item in copyright" :key="item.link">
               <a v-if="item.link" :href="item.link" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
-              <template v-else>{{ item.text }}</template>
+              <template v-else><span v-html="item.text">{{ item.text }}</span></template>
             </li>
           </ul>
         </p>
