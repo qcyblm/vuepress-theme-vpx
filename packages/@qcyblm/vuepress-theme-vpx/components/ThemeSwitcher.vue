@@ -21,14 +21,14 @@ export default {
       isLight: '',
     };
   },
-  created() {
+  beforeMount() {
+    let htmlTag = document.getElementsByTagName("html")[0];
     if (!window.localStorage) {
       console.log("The browser needs to support localstorage.");
       return false;
     } else {
       var storage = window.localStorage;
       this.isLight = storage.getItem("theme");
-      let htmlTag = document.getElementsByTagName("html")[0];
       if (this.isLight === 'light') {
         this.isLight = true;
         window.localStorage.setItem("theme", "light");
@@ -46,7 +46,6 @@ export default {
     themeSwitch() {
       window.location;
       this.isLight = !this.isLight;
-
       let htmlTag = document.getElementsByTagName("html")[0];
       if (this.isLight) {
         window.localStorage.setItem("theme", "light");
