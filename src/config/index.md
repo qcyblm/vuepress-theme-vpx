@@ -173,8 +173,8 @@ module.exports = {
       beianicon: '', // 备案图标 (可选)
       copyright: [  // 版权信息，显示在页脚右侧。
         {
-          text: '',  // 名称
-          link: ''  // 链接
+          text: '',  // 名称 (未选 link 时，支持 html 渲染解析标签支持)
+          link: ''  // 链接 (可选)
         },
         {
           text: '',  // 名称
