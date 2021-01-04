@@ -18,7 +18,7 @@ export default {
   name: "ThemeSwitcher",
   data() {
     return {
-      isLight: true,
+      isLight: '',
     };
   },
   // 窗体加载时运行-wjt
@@ -30,13 +30,15 @@ export default {
       //主逻辑业务
       var storage = window.localStorage;
       this.isLight = storage.getItem("theme");
-      console.log(storage.getItem("theme"))
+      // console.log(storage.getItem("theme"))
       let htmlTag = document.getElementsByTagName("html")[0];
       if (this.isLight === 'light') {
+        this.isLight = true;
         window.localStorage.setItem("theme", "light");
         htmlTag.setAttribute("data-theme", "light");
         this.$emit("themeMode", "light");
       } else {
+        this.isLight= false
         window.localStorage.setItem("theme", "dark");
         htmlTag.setAttribute("data-theme", "dark");
         this.$emit("themeMode", "dark");
