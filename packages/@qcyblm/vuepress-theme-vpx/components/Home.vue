@@ -81,7 +81,7 @@
         </p>
         <p class="right-wrap">
           <ul class="copyright">
-            <li>Theme by <a href="https://github.com/qcyblm/vuepress-theme-vpx" title="本站主题" target="_blank" rel="noopener noreferrer">VPX</a> </li>
+            <li>Theme by <a href="https://gitee.com/qcyblm/vuepress-theme-vpx" title="本站主题" target="_blank" rel="noopener noreferrer">VPX</a> </li>
             <li>Powered by <a href="https://www.vuepress.cn/" target="_blank" rel="noopener noreferrer">VuePress</a> </li>
             <li v-if="footer.licensedLink">
               <a :href="footer.licensedLink" target="_blank" rel="noopener noreferrer">{{ footer.licensed }}</a> Licensed

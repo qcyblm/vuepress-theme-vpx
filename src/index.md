@@ -11,7 +11,7 @@ footerWrap:
 - title: 生态系统
   item:
   - text: VPX
-    link: https://qcyblm.github.io/vuepress-theme-vpx/
+    link: https://qcyblm.gitee.io/vuepress-theme-vpx/
     desc: VuePress 主题
 - title: 网站框架
   item:
@@ -57,6 +57,8 @@ module.exports = {
 ```
 
 ### 更新日志
+#### v1.0.7(2021.01.16)
+- 默认暗黑模式更改为浅色模式
 #### v1.0.6(2021.01.04)
 - 修复暗黑模式强制刷新变浅色模式
 - 新增 `copyright` html 渲染解析标签支持

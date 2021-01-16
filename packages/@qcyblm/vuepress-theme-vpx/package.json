@@ -1,11 +1,11 @@
 {
   "name": "@qcyblm/vuepress-theme-vpx",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "VPX theme for VuePress",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qcyblm/vuepress-theme-vpx.git"
+    "url": "git+https://gitee.com/qcyblm/vuepress-theme-vpx.git"
   },
   "keywords": [
     "vpx",
@@ -16,9 +16,9 @@
   "author": "qcyblm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qcyblm/vuepress-theme-vpx/issues"
+    "url": "https://gitee.com/qcyblm/vuepress-theme-vpx/issues"
   },
-  "homepage": "https://github.com/qcyblm/vuepress-theme-vpx#readme",
+  "homepage": "https://gitee.com/qcyblm/vuepress-theme-vpx#readme",
   "dependencies": {
     "@vuepress/plugin-active-header-links": "1.7.1",
     "@vuepress/plugin-nprogress": "1.7.1",
