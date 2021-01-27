@@ -38,6 +38,6 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com,192.30.255.113,140.82.112.4,140.82.113.3,140.82.112.3,140.82.114.3,140.82.113.4,140.82.121.4,140.82.114.4,52.74.223.119,13.229.188.59,140.82.121.3 >> ~/.ssh/known_hosts
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
           git push -f git@github.com:${GITHUB_NAME}/vuepress-theme-vpx.git master:gh-pages
           rm -rf ~/.ssh/known_hosts
