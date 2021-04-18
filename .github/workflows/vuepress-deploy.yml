@@ -4,40 +4,30 @@ on:
     branches:
       - master
 env:
-  LANG: zh_CN.UTF-8
-  LANGUAGE: zh_CN
   TZ: Asia/Shanghai
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v2.3.4
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+      - name: Setup Node.js environment  ⚙️
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: 15.x
-      - name: build and deploy
-        env:
-          GITHUB_NAME: ${{ secrets.ACCESS_NAME }}
-          GITHUB_EMAIL: ${{ secrets.ACCESS_EMAIL }}
-          ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+      - name: Install and Build 🔧
         run: |
-          yarn config set registry https://r.npm.taobao.org
           yarn
           yarn docs:build
-          cd src/.vuepress/dist
-          git init
-          git config user.name "${GITHUB_NAME}"
-          git config user.email "${GITHUB_EMAIL}"
-          git add -A
-          git commit -m "Auto Deploy from Github Actions: $(date +"%Y年%m月%d日 %T %Z")"
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-          git push -f git@github.com:${GITHUB_NAME}/vuepress-theme-vpx.git master:gh-pages
-          rm -rf ~/.ssh/known_hosts
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: src/.vuepress/dist
+          git-config-name: ${{ secrets.ACCESS_NAME }}
+          git-config-email: ${{ secrets.ACCESS_EMAIL }}
+          commit-message: "Deploy Production Code for Commit ${{ github.sha }}"
