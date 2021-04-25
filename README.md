@@ -1,18 +1,13 @@
-<p align="center">
-  <a href="https://qcyblm.github.io/vuepress-theme-vpx/" target="_blank">
-    <img width="180" src="https://qcyblm.github.io/vuepress-theme-vpx/vpx.png" alt="logo">
-  </a>
-</p>
+# ![Logo](src/.vuepress/public/assets/img/logo.png) VPX - A theme developed based on VuePress
 
-![npm](https://img.shields.io/npm/l/@qcyblm/vuepress-theme-vpx)
-[![npm (scoped)](https://img.shields.io/npm/v/@qcyblm/vuepress-theme-vpx)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx?activeTab=versions)
-![npm](https://img.shields.io/npm/dt/@qcyblm/vuepress-theme-vpx)
-
-![GitHub stars](https://img.shields.io/github/stars/qcyblm/vuepress-theme-vpx)
-![GitHub forks](https://img.shields.io/github/forks/qcyblm/vuepress-theme-vpx)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx?include_prereleases)](https://github.com/qcyblm/vuepress-theme-vpx/releases)
-[![GitHub issues](https://img.shields.io/github/issues/qcyblm/vuepress-theme-vpx)](https://github.com/qcyblm/vuepress-theme-vpx/issues)
-
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/qcyblm/vuepress-theme-vpx/master)](https://github.com/qcyblm/vuepress-theme-vpx/commits/master)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/qcyblm/vuepress-theme-vpx/vuepress-deploy/master)](https://github.com/qcyblm/vuepress-theme-vpx/actions)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/qcyblm/vuepress-theme-vpx)](https://github.com/qcyblm/vuepress-theme-vpx/releases/latest)
+[![npm](https://img.shields.io/npm/v/@qcyblm/vuepress-theme-vpx)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx)
+[![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/@qcyblm/vuepress-theme-vpx/latest)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx)
+[![npm](https://img.shields.io/npm/dm/@qcyblm/vuepress-theme-vpx)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx)
+[![npm](https://img.shields.io/npm/dt/@qcyblm/vuepress-theme-vpx)](https://www.npmjs.com/package/@qcyblm/vuepress-theme-vpx)
+[![npm](https://img.shields.io/npm/l/@qcyblm/vuepress-theme-vpx)](/LICENSE)
 ![Author](https://img.shields.io/badge/Author-qcyblm-red)
 ![Theme](https://img.shields.io/badge/Theme-@qcyblm/vuepress-%2dtheme-%2dvpx-red)
 ![QQ群](https://img.shields.io/badge/QQ群-984339883-red)
