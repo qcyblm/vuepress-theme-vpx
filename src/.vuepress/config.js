@@ -1,5 +1,5 @@
 module.exports = {
-  base: './',
+  base: '/vuepress-theme-vpx/',
   temp: '.temp',
   locales: {
     '/': {
