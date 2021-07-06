@@ -1,33 +1,35 @@
 name: vuepress-deploy
-on: 
+on:
   push:
     branches:
       - master
-env:
-  TZ: Asia/Shanghai
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['14']
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v2.3.4
         with:
           persist-credentials: false
           fetch-depth: 0
-      - name: Setup Node.js environment  ⚙️
+        env:
+          TZ: Asia/Shanghai
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: 15.x
-      - name: Install and Build 🔧
-        run: |
-          yarn
-          yarn docs:build
-      - name: Deploy 🚀
+          node-version:  ${{ matrix.node }}
+      - name: Install dependencies
+        run: yarn
+      - name: Build VuePress
+        run: yarn docs:build
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
           branch: gh-pages
+          token: ${{ github.token }}
           folder: src/.vuepress/dist
-          git-config-name: ${{ secrets.ACCESS_NAME }}
-          git-config-email: ${{ secrets.ACCESS_EMAIL }}
-          commit-message: "Deploy Production Code for Commit ${{ github.sha }}"
