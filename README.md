@@ -11,6 +11,7 @@
 ![Author](https://img.shields.io/badge/Author-qcyblm-red)
 ![Theme](https://img.shields.io/badge/Theme-@qcyblm/vuepress-%2dtheme-%2dvpx-red)
 ![QQ群](https://img.shields.io/badge/QQ群-984339883-red)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqcyblm%2Fvuepress-theme-vpx.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqcyblm%2Fvuepress-theme-vpx?ref=badge_shield)
 
 ------------------
 
@@ -65,3 +66,6 @@ module.exports = {
 
 ## LICENSE
 [MIT](/LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fqcyblm%2Fvuepress-theme-vpx.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fqcyblm%2Fvuepress-theme-vpx?ref=badge_large)
